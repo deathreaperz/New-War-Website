@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credits — Yuri's Revenge: New War</title>
+<meta name="description" content="Full credits for Yuri's Revenge: New War — the unofficial expansion for Command & Conquer: Red Alert 2.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .credits-section{ margin-bottom:52px; }
+  .credits-section:last-child{ margin-bottom:0; }
+  .credits-label{
+    font-family:var(--font-mono); font-size:.72rem; letter-spacing:.18em;
+    color:var(--rift-violet); text-transform:uppercase;
+    display:block; margin-bottom:18px;
+    padding-bottom:8px; border-bottom:1px solid var(--line);
+  }
+
+  /* Core team cards */
+  .team-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:14px; }
+  .team-card{
+    background:var(--panel-2); border:1px solid var(--line);
+    border-top:2px solid var(--rift-violet);
+    padding:16px 18px;
+  }
+  .team-card.ex{ border-top-color:var(--steel-dim); }
+  .team-card .t-name{ font-family:var(--font-display); font-size:1.05rem; color:var(--paper); margin:0 0 5px; }
+  .team-card .t-role{ font-family:var(--font-mono); font-size:.68rem; letter-spacing:.1em; color:var(--steel-dim); text-transform:uppercase; line-height:1.5; }
+
+  /* Credit list (for long sections) */
+  .credit-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+  .credit-list li{ display:flex; gap:12px; font-size:.93rem; }
+  .credit-list .c-name{ color:var(--paper); font-weight:500; min-width:180px; flex-shrink:0; }
+  .credit-list .c-work{ color:var(--steel); }
+
+  /* Tester chips */
+  .chip-row{ display:flex; flex-wrap:wrap; gap:8px; }
+  .chip{
+    font-family:var(--font-mono); font-size:.72rem; letter-spacing:.08em;
+    border:1px solid var(--line); color:var(--steel);
+    padding:5px 12px; border-radius:2px;
+  }
+  .chip.ex{ opacity:.55; }
+
+  /* Map credits — compact two-col */
+  .map-block{ background:var(--panel-2); border:1px solid var(--line); padding:18px 20px; margin-bottom:10px; }
+  .map-block .m-author{ font-family:var(--font-display); font-size:1rem; color:var(--paper); margin:0 0 8px; }
+  .map-block .m-maps{ font-size:.88rem; color:var(--steel); line-height:1.6; }
+
+  @media(max-width:600px){
+    .credit-list li{ flex-direction:column; gap:3px; }
+    .credit-list .c-name{ min-width:0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="b1">NEW WAR</span><span class="b2">YURI'S REVENGE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Story</a></li>
+      <li><a href="factions.html">Factions</a></li>
+      <li><a href="download.html">Download</a></li>
+      <li><a href="credits.html" class="active">Credits</a></li>
+    </ul>
+    <a href="download.html" class="nav-cta">Get the Mod</a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Acknowledgements</span>
+    <h1>Credits</h1>
+    <p>Yuri's Revenge: New War is the work of many people across the C&amp;C modding community and beyond. Last updated November 2023.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width:900px;">
+
+    <!-- CORE TEAM -->
+    <div class="credits-section">
+      <span class="credits-label">Core Team — Creatives</span>
+      <div class="team-grid">
+        <div class="team-card">
+          <p class="t-name">Deathreaperz</p>
+          <p class="t-role">Founder &middot; Leader &middot; Story Writer &middot; Mapper &middot; Coder</p>
+        </div>
+        <div class="team-card">
+          <p class="t-name">Creator</p>
+          <p class="t-role">Voxel Artist</p>
+        </div>
+        <div class="team-card">
+          <p class="t-name">Anti_Surface</p>
+          <p class="t-role">SHP Artist</p>
+        </div>
+        <div class="team-card">
+          <p class="t-name">Otamaa</p>
+          <p class="t-role">Technician</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORMER CREATIVES -->
+    <div class="credits-section">
+      <span class="credits-label">Former Creatives</span>
+      <div class="team-grid">
+        <div class="team-card ex">
+          <p class="t-name">MustaphaTR</p>
+          <p class="t-role">Mission Designer</p>
+        </div>
+        <div class="team-card ex">
+          <p class="t-name">Fission</p>
+          <p class="t-role">Voxel Artist</p>
+        </div>
+        <div class="team-card ex">
+          <p class="t-name">Rickrick</p>
+          <p class="t-role">Voxel Artist</p>
+        </div>
+        <div class="team-card ex">
+          <p class="t-name">Ambersia</p>
+          <p class="t-role">Coder</p>
+        </div>
+        <div class="team-card ex">
+          <p class="t-name">Tslza</p>
+          <p class="t-role">Coder</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTERS -->
+    <div class="credits-section">
+      <span class="credits-label">Testers</span>
+      <div class="chip-row">
+        <span class="chip">Anti_Surface</span>
+        <span class="chip">BoredEXE / Otamaa</span>
+        <span class="chip">LUKAS</span>
+        <span class="chip">Myonmi / Awoo Pringle</span>
+        <span class="chip">Raider Fenrir</span>
+        <span class="chip">Yamanekoayf</span>
+        <span class="chip">phatkg191 / MAC-10</span>
+      </div>
+    </div>
+
+    <!-- FORMER TESTERS -->
+    <div class="credits-section">
+      <span class="credits-label">Former Testers</span>
+      <div class="chip-row">
+        <span class="chip ex">Ambersia</span>
+        <span class="chip ex">Tslza</span>
+        <span class="chip ex">IvanderLim / Cupshadow</span>
+        <span class="chip ex">Brojack</span>
+        <span class="chip ex">FieldWolf</span>
+        <span class="chip ex">MustaphaTR</span>
+      </div>
+    </div>
+
+    <!-- GRAPHICS -->
+    <div class="credits-section">
+      <span class="credits-label">Graphics — SHP &amp; Animation</span>
+      <ul class="credit-list">
+        <li><span class="c-name">MadHQ</span><span class="c-work">Allied Repair Crane, Allied Animated GapGen, Biked Terrorist, Invader, Soviet Airfield Facility, Tech Missile Bunker, Yuri Magnetower, Yuri Airpad</span></li>
+        <li><span class="c-name">Atomic_Noodles</span><span class="c-work">Allied Airpad, Remappable Walls, SEAL Theater Variants, Guardian GI, Brute Poisoned Death, various SHP Animation &amp; Fixes</span></li>
+        <li><span class="c-name">Starkku</span><span class="c-work">Remappable Walls, Terrain Tree Fixes, Tech Missile Bunker Damaged &amp; Snow Frame</span></li>
+        <li><span class="c-name">HG_SCIPCION</span><span class="c-work">Soviet Sentry Gun, Soviet Flak Cannon, Paris Tower</span></li>
+        <li><span class="c-name">Quiet</span><span class="c-work">Archer, Paraglider Conscript, Flame Trooper, Kanashi, Gatling Brute</span></li>
+        <li><span class="c-name">Anti_Surface</span><span class="c-work">Ronco, Kabus, Shen Lin, Land Mine, Allied Pillbox, Allied Cannon Turret, Boyke, Corsair, Laser Trooper, Tyrant, Hall of Order, Biocrawler, Baby Biocrawler, Bio Infestation, various Cursors &amp; SHP Animations</span></li>
+        <li><span class="c-name">Kenosis</span><span class="c-work">DropPod Animation, various SHP Animations</span></li>
+        <li><span class="c-name">Trans_C</span><span class="c-work">Nano Trooper, Tech Field Defenses</span></li>
+        <li><span class="c-name">BySc</span><span class="c-work">Soviet Propaganda Tower, Soviet Tunnel, Allied Gate, Soviet Gate</span></li>
+        <li><span class="c-name">Nooze</span><span class="c-work">Soviet Blast Cannon, Radio Station</span></li>
+        <li><span class="c-name">Symphonic</span><span class="c-work">Power Plant Upgrade</span></li>
+        <li><span class="c-name">xgamer</span><span class="c-work">Prism Tower Buildup</span></li>
+        <li><span class="c-name">Dny</span><span class="c-work">Chaingunner, KGB Agent Fix</span></li>
+        <li><span class="c-name">tomsons26lv</span><span class="c-work">Allied Support Center</span></li>
+        <li><span class="c-name">LaoTze</span><span class="c-work">Ranger G.I., Engineer Boat, Irradiator, Killer Whale</span></li>
+        <li><span class="c-name">MasterHaosis</span><span class="c-work">Various SHP Animations</span></li>
+        <li><span class="c-name">MooMan</span><span class="c-work">Yuri Psychic Beacon</span></li>
+        <li><span class="c-name">紫色放逐</span><span class="c-work">Force Shield Animation</span></li>
+        <li><span class="c-name">红枫</span><span class="c-work">Tank Parachute Animation</span></li>
+        <li><span class="c-name">Blade</span><span class="c-work">Infiltrant</span></li>
+        <li><span class="c-name">TX Team</span><span class="c-work">Terrain Expansion</span></li>
+        <li><span class="c-name">Remus</span><span class="c-work">Various SHP Animations</span></li>
+        <li><span class="c-name">LordKal</span><span class="c-work">KGB Agent, Militia, Parasite</span></li>
+        <li><span class="c-name">cxtian39</span><span class="c-work">Stingray, Magbird</span></li>
+        <li><span class="c-name">Gamemate</span><span class="c-work">Blackforce ConYard, Blackforce Coal Plant, Blackforce Barracks, Blackforce Ore Refinery, various SHP Animations</span></li>
+        <li><span class="c-name">GraionDilach</span><span class="c-work">RA1 C4 Animation</span></li>
+        <li><span class="c-name">Holy_Master</span><span class="c-work">Various SHP Animations</span></li>
+        <li><span class="c-name">ApolloTD</span><span class="c-work">Various SHP Animations</span></li>
+        <li><span class="c-name">DonutArnold</span><span class="c-work">Various SHP Animations</span></li>
+        <li><span class="c-name">Fryone</span><span class="c-work">EMP Cursor</span></li>
+        <li><span class="c-name">Ocey</span><span class="c-work">Various SHP Animations</span></li>
+        <li><span class="c-name">demented</span><span class="c-work">Phalanx Cryo SAM</span></li>
+        <li><span class="c-name">Volkov T-666</span><span class="c-work">Disk Laser Animation, Psychic Disruptor Ring, Desolator, Psychic Buster, Brute Electrocuted &amp; Radiation Death</span></li>
+        <li><span class="c-name">Knight</span><span class="c-work">Allied, Soviet, Yuri &amp; Blackforce Attack Dog</span></li>
+        <li><span class="c-name">DaFool</span><span class="c-work">Ninja, Bio Trooper</span></li>
+        <li><span class="c-name">FieldWolf</span><span class="c-work">Boyke Ring Animation, Chrono Lancer Ring Animation, Propaganda Tower Ring Animation</span></li>
+        <li><span class="c-name">G-E</span><span class="c-work">Snow Buildings</span></li>
+        <li><span class="c-name">Keject</span><span class="c-work">Steel Furnace, Psychic Disruptor, Psychic Dominator Animation</span></li>
+        <li><span class="c-name">Nour</span><span class="c-work">Industrial Plant Smoke, Steel Furnace Smoke, Snow Support Control Center, Snow Steel Furnace, Snow Psychic Buster, Snow Yuri Ore Refinery, misc. Cameos</span></li>
+        <li><span class="c-name">BoundaryHand</span><span class="c-work">Chrono Lancer Animation</span></li>
+        <li><span class="c-name">ChronoLoony</span><span class="c-work">Parasite</span></li>
+        <li><span class="c-name">Medalmonkey</span><span class="c-work">Parasite Fix, Sniper, Riot Trooper, Riot Bomber</span></li>
+        <li><span class="c-name">SMXReaver</span><span class="c-work">Yuri Ore Refinery</span></li>
+        <li><span class="c-name">ppap1104</span><span class="c-work">Various SHP Animations</span></li>
+      </ul>
+    </div>
+
+    <!-- IMAGES / CAMEOS -->
+    <div class="credits-section">
+      <span class="credits-label">Images &amp; Cameos</span>
+      <ul class="credit-list">
+        <li><span class="c-name">tomsons26lv</span><span class="c-work">Blackforce Logo, textless RA2YR Cameo</span></li>
+        <li><span class="c-name">SuperMaxitron</span><span class="c-work">Skirmish Background UI</span></li>
+        <li><span class="c-name">Deathreaperz</span><span class="c-work">Cameo work</span></li>
+        <li><span class="c-name">EVA_251</span><span class="c-work">Robot Guard Cameo</span></li>
+        <li><span class="c-name">Nooze</span><span class="c-work">Blast Cannon Cameo</span></li>
+        <li><span class="c-name">Speeder</span><span class="c-work">Yuri Attack Dog Cameo</span></li>
+        <li><span class="c-name">MadHQ</span><span class="c-work">Yuri Airpad Cameo</span></li>
+      </ul>
+    </div>
+
+    <!-- VOXELS -->
+    <div class="credits-section">
+      <span class="credits-label">Voxels</span>
+      <ul class="credit-list">
+        <li><span class="c-name">Creator</span><span class="c-work">Howling Howitzer, Vulcan AA Tank (Deployed), Aegis Cruiser, Frosch APC, Allied Paradrop Plane, Apocalypse Tank, Battle Fortress, Beike Crawler, Nuke Bomber, Aircraft Carrier, Nimitz Command Carrier, Comanche (edit), Chrono Zapper, Destroyer, Bomb Truck, Phantom, Harrier, Siege Grad, Grizzly Tank, Carpet Bomber, Flak Track, Rhino Tank, Sea Scorpion, Mako Fighter, Missile Cruiser, Allied Hover Transport, Storm Tank, Mirage Tank, Soviet Paradrop Plane, Prism Tank, Typhoon Sub, Tank Destroyer, Soviet Hover Transport, Tesla Tank, Black Widow, War Miner, Yuri Paradrop Plane, Kirov Airship, MiG Fighter, Magnetron, Black Eagle, Ramka Tank</span></li>
+        <li><span class="c-name">Moder.U</span><span class="c-work">Abrams Tank, Robot Tank, Gatling Tank, Duster Tank, Tunguska, Experimental MiG, Scrambler, Chaos Drone</span></li>
+        <li><span class="c-name">Fission</span><span class="c-work">Allied MCV, Soviet MCV, Yuri MCV, Hawk Carrier, Lasher Tank, Gatling Cannon Turret, WhiteHawk Transport</span></li>
+        <li><span class="c-name">Bu7loos</span><span class="c-work">E.M.P. Bomber, Grand Cannon, Robot Guard, Floating Disk, Batwing, Gatling Fist, Reaper Tank, Infector Tank</span></li>
+        <li><span class="c-name">cyanideT</span><span class="c-work">Chrono Prison, V3 Launcher, Mastermind, Mobile Gap Generator</span></li>
+        <li><span class="c-name">MadHQ</span><span class="c-work">Rocket Buggy, Gatling Boat</span></li>
+        <li><span class="c-name">Salted Old</span><span class="c-work">Mole APC, IFV, Mobile Gap Generator, Stingray, Sea Raider</span></li>
+        <li><span class="c-name">Atomic_Noodles</span><span class="c-work">Spy Plane, Civilian Voxel Fixes, Burst Drone</span></li>
+        <li><span class="c-name">Mig Eater</span><span class="c-work">Comanche (base)</span></li>
+        <li><span class="c-name">Azri_Apoc</span><span class="c-work">Nighthawk Fighter</span></li>
+        <li><span class="c-name">carnage_xploade</span><span class="c-work">Vulcan AA Tank</span></li>
+        <li><span class="c-name">Roby_Rulz</span><span class="c-work">Siege Chopper</span></li>
+        <li><span class="c-name">Nighthawk, Blade</span><span class="c-work">IFV Turrets</span></li>
+        <li><span class="c-name">Commando_2047 + snmiglight</span><span class="c-work">Dreadnought</span></li>
+        <li><span class="c-name">Fryone</span><span class="c-work">Chrono Miner</span></li>
+        <li><span class="c-name">Mentalleger</span><span class="c-work">IFV Turrets, Boomer Sub, Chrono Lancer, Grinder Tank, Mind Leecher, Mind Voyager, Hover Bio Splatter, Amphibian Miner</span></li>
+        <li><span class="c-name">Warphan</span><span class="c-work">Proto Jet-Tengu, Colombus, Sputnik, Emmissary, Stealth Miner</span></li>
+        <li><span class="c-name">cxtian39</span><span class="c-work">Conquest</span></li>
+        <li><span class="c-name">MidianP</span><span class="c-work">Infector Bomber, Saviour Disk</span></li>
+        <li><span class="c-name">Enterprise-企业</span><span class="c-work">Civilian Voxels Remake</span></li>
+        <li><span class="c-name">13220379104</span><span class="c-work">Magnath</span></li>
+      </ul>
+    </div>
+
+    <!-- VOICES -->
+    <div class="credits-section">
+      <span class="credits-label">Voices</span>
+      <ul class="credit-list">
+        <li><span class="c-name">Matthew Vanston</span><span class="c-work">Missile Cruiser, Frosch APC, Kanashi, Emperor Airship, Ramka Tank, Beike Crawler, Kabus</span></li>
+        <li><span class="c-name">ComradeCrimson</span><span class="c-work">Nano Trooper, Duster Tank, Tunguska</span></li>
+        <li><span class="c-name">Haubibban</span><span class="c-work">Arsonist, KGB Agent, Vulcan AA Tank, Mako Fighter, Infiltrant, Mole APC, Amphibian Miner</span></li>
+        <li><span class="c-name">George "Seoras" Exley</span><span class="c-work">Skyguard, Prism Enforcer, Invader</span></li>
+        <li><span class="c-name">StringStorm</span><span class="c-work">Abrams Tank, Storm Tank</span></li>
+        <li><span class="c-name">Cari Scholtens</span><span class="c-work">Hawk Carrier</span></li>
+        <li><span class="c-name">Musketmarine</span><span class="c-work">Howling Howitzer</span></li>
+        <li><span class="c-name">DOOMGUY</span><span class="c-work">Ronco</span></li>
+        <li><span class="c-name">Flamewh33l</span><span class="c-work">Reaper Tank</span></li>
+      </ul>
+    </div>
+
+    <!-- MUSIC -->
+    <div class="credits-section">
+      <span class="credits-label">Game Music</span>
+      <ul class="credit-list">
+        <li><span class="c-name">Scar Tissue</span><span class="c-work">Subterranean Screens, Double Blind, Mammoth, Not Your Own Remix, Soiled Remix, Remembrane Remix, Subterrain Remix</span></li>
+        <li><span class="c-name">Tiberian Sons ft. Frank Klepacki</span><span class="c-work">Paragon is an A-Hole, Hell March to the Apocalypse, Permafrost</span></li>
+        <li><span class="c-name">Frank Klepacki</span><span class="c-work">Armored Advance, Crushing the Limit, Cybertek, Dark Assault, Defunkt, Freaks From Within, Gunslinger, Meltdown, Mode One, Morphscape, Morphunk, Night Dive, Rapid Rotation, Rebellion, Virus</span></li>
+      </ul>
+    </div>
+
+    <!-- ENGINE & TOOLS -->
+    <div class="credits-section">
+      <span class="credits-label">Engine &amp; Utilities</span>
+      <ul class="credit-list">
+        <li><span class="c-name">Westwood</span><span class="c-work">Original game engine</span></li>
+        <li><span class="c-name">ARES Team</span><span class="c-work">Ares engine extension</span></li>
+        <li><span class="c-name">Phobos Team</span><span class="c-work">Phobos engine extension</span></li>
+        <li><span class="c-name">CnCNet Team</span><span class="c-work">Game client &amp; multiplayer server</span></li>
+        <li><span class="c-name">Narzoul</span><span class="c-work">DDRAW optimization</span></li>
+        <li><span class="c-name">Askeladd &amp; E1 Elite</span><span class="c-work">AI Editor</span></li>
+        <li><span class="c-name">zzattack</span><span class="c-work">CnC Map Renderer</span></li>
+        <li><span class="c-name">XCC Team</span><span class="c-work">XCC Utilities</span></li>
+        <li><span class="c-name">C&amp;C Tools Team</span><span class="c-work">SHP Builder, Voxel Editor, HVA Builder</span></li>
+        <li><span class="c-name">E1 Elite</span><span class="c-work">Map Resizer</span></li>
+        <li><span class="c-name">VK</span><span class="c-work">LoadScreenBuilder</span></li>
+      </ul>
+    </div>
+
+    <!-- MAPS -->
+    <div class="credits-section">
+      <span class="credits-label">Skirmish Maps</span>
+      <div class="map-block">
+        <p class="m-author">WavePy</p>
+        <p class="m-maps">Dawn Divine, Face to the Feud, Frozen Divine, Living Death Girls, Metriorlite, Nitro, Pinchpoints, Pinch Valley, Sand Slough, Sekigahara, Spineral, Stardusk, Pipeline Rivers</p>
+      </div>
+      <div class="map-block">
+        <p class="m-author">Cesare</p>
+        <p class="m-maps">Paradise Battle</p>
+      </div>
+      <div class="map-block">
+        <p class="m-author">MadHQ</p>
+        <p class="m-maps">Baked Gulch, Bay War, Blistering Sands, Bloodshed Reef, Factory Canal, Grinder, Haven Conflict, Icebound Fray, Mirror's Edge, Pond Skirmish, Public Combat, Subi Reef, Tournament Dune, Village Circuit, Wild Shootout, Batchawana Bay, Cubed Combat, Dahlac Marine, Devil's Triangle, Easter Island, In Spitting Distance, Koopa Troopa Beach, Mantinicus Island, Polar Knot, Pyroclasm, Rapid Trio, San Fran Presidio, Twistid Drop, Two Ocean Lake, About-Face, Bifold Retreat, Crystal Whiplash, Cuffed Cove, Hard Escape, Inner Deterrence, Peace Garden, Pinnacle Freeze, Radial Assault, Set-To Destruction, Sierra Cleave, Tetrad Bloodshed, The Great Belt, Two Faced, Arid Superiority, Civic Hustling, Lost Valley, Quinary Barrage, Sebkhel el Melah, Snowflake Clash, Star Reef, Take A Hike, Civic Violence, Harima-nada, Magmageddon, Mechanical Island, Puzzling Peninsula, Senary Cluster, Sextuplet Bluff, Straight Shot, Sub-Zero, Urban Midway, Anchorage Buffet, Forbidden Love, Icy Cellar, Inland Sea, Inner-City Toil, Metropolis Height, Midnight Splat, Nora Island, Requiem, Ring of Death, Tokashiki, Arctic Twist, Battle Royal, Brute Lagoon, Clover Conflict, Coastal Influence, Divide and Conquer, Down the Drain, Dusty Avalanche, Dusty Web-Site, Eriond, Exhausted Onslaught, Forsaken Waste, Frost-Bound, Hex Bay, Icy Pinch, Killing Tide, Ore Pit, Pacific Rim, Permafrost Circus, Plush Bluff, Port Royal, The Great Divide, Tyrrhenian Sea</p>
+      </div>
+    </div>
+
+    <!-- SPECIAL THANKS -->
+    <div class="credits-section">
+      <span class="credits-label">Special Thanks</span>
+      <div class="chip-row">
+        <span class="chip">Westwood Studios — for the game</span>
+        <span class="chip">PPMForums — public resources &amp; modding community</span>
+        <span class="chip">ModDB — mod hosting</span>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="credits-section">
+      <span class="credits-label">Corrections &amp; Contact</span>
+      <div class="dossier">
+        <p>If you believe your work is uncredited, credited incorrectly, or should not be used in this mod, please reach out:</p>
+        <p style="margin-bottom:0;">
+          Email: <a href="mailto:reaperz.death2@gmail.com" style="color:var(--rift-cyan);">reaperz.death2@gmail.com</a><br>
+          Discord: <a href="https://discord.com/invite/MtTSG6c" target="_blank" rel="noopener" style="color:var(--rift-cyan);">discord.com/invite/MtTSG6c</a> — deathreaperz
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; 2026 New War Modding Team. Fan-made, non-commercial.</span>
+      <span>Command &amp; Conquer: Red Alert 2 is a trademark of Electronic Arts Inc.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
