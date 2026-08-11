@@ -3,20 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Black Force Infantry — Yuri's Revenge: New War</title>
-<meta name="description" content="The Black Force Infantry roster for Yuri's Revenge: New War.">
+<title>Infantry — Black Force — Yuri's Revenge: New War</title>
+<meta name="description" content="Black Force Infantry roster for Yuris Revenge: New War.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="site-header">
   <nav class="nav">
-    <a href="index.html" class="brand">
-      <span class="b1">NEW WAR</span>
-      <span class="b2">YURI'S REVENGE</span>
-    </a>
+    <a href="index.html" class="brand"><span class="b1">NEW WAR</span><span class="b2">YURI'S REVENGE</span></a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="story.html">Story</a></li>
@@ -27,78 +23,38 @@
     <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
   </nav>
 </header>
-
-<section class="page-hero" style="--fc:#9b1c2c;">
-  <div class="container">
-    <div class="fx-head reveal">
-      <svg class="fx-icon-lg" viewBox="0 0 48 48" fill="none" stroke="#9b1c2c" stroke-width="2" style="width:64px;height:64px;"><circle cx="24" cy="24" r="18"/><path d="M13 24 C13 17 20 17 24 24 C28 31 35 31 35 24 C35 17 28 17 24 24 C20 31 13 31 13 24 Z"/></svg>
-      <div>
-        <span class="eyebrow" style="color:#9b1c2c;">Faction Four &mdash; Black Force</span>
-        <h1 class="mt-0">Infantry</h1>
+<section class="page-hero" style="--fc:#9b1c2c;"><div class="container"><div class="fx-head reveal"><svg class="fx-icon-lg" viewBox="0 0 48 48" fill="none" stroke="#9b1c2c" stroke-width="2" style="width:64px;height:64px;"><circle cx="24" cy="24" r="18"/><path d="M13 24 C13 17 20 17 24 24 C28 31 35 31 35 24 C35 17 28 17 24 24 C20 31 13 31 13 24 Z"/></svg><div><span class="eyebrow" style="color:#9b1c2c;">Faction Four &mdash; Black Force</span><h1 class="mt-0">Infantry</h1></div></div></div></section>
+<div class="subnav" style="--fc:#9b1c2c;"><div class="container"><a href="blackforce_info.html">Overview</a><a href="blackforce_infantry.html" class="active">Infantry</a><a href="blackforce_units.html">Units</a><a href="blackforce_structures.html">Structures</a></div></div>
+<section style="padding:48px 0 80px;"><div class="container" style="--fc:#9b1c2c;">
+<div class="section-head reveal" style="margin-bottom:28px;"><span class="section-tag" style="color:#9b1c2c;">Order of Battle</span><h2>Black Force Infantry</h2><p>Select a unit icon to view full stats and tactical notes.</p></div>
+<div class="unit-roster" id="palette">
+<button class="unit-entry" data-uid="phase_trooper"><div class="unit-icon-box"><img src="icons/bf_phase_trooper.png" alt="Phase Trooper" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Ph.Tpr</div>'"></div><span class="unit-name">Phase Trooper</span></button>
+<button class="unit-entry" data-uid="temporal_scout"><div class="unit-icon-box"><img src="icons/bf_temporal_scout.png" alt="Temporal Scout" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Scout</div>'"></div><span class="unit-name">Temporal Scout</span></button>
+<button class="unit-entry" data-uid="engineer"><div class="unit-icon-box"><img src="icons/bf_engineer.png" alt="Engineer" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Engr</div>'"></div><span class="unit-name">Engineer</span></button>
+<button class="unit-entry" data-uid="temporal_shield"><div class="unit-icon-box"><img src="icons/bf_temporal_shield.png" alt="Temporal Shield" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>T.Shld</div>'"></div><span class="unit-name">Temporal Shield</span></button>
+<button class="unit-entry" data-uid="shift_agent"><div class="unit-icon-box"><img src="icons/bf_shift_agent.png" alt="Shift Agent" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Shift</div>'"></div><span class="unit-name">Shift Agent</span></button>
+<button class="unit-entry" data-uid="void_commando"><div class="unit-icon-box"><img src="icons/bf_void_commando.png" alt="Void Commando" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Void</div>'"></div><span class="unit-name">Void Commando</span></button>
+<button class="unit-entry" data-uid="rift_walker"><div class="unit-icon-box"><img src="icons/bf_rift_walker.png" alt="Rift Walker" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>R.Walk</div>'"></div><span class="unit-name">Rift Walker</span></button>
+<button class="unit-entry" data-uid="paradox_soldier"><div class="unit-icon-box"><img src="icons/bf_paradox_soldier.png" alt="Paradox Soldier" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Prdx</div>'"></div><span class="unit-name">Paradox Soldier</span></button>
+</div>
+    <div class="unit-detail-card" id="detail-card">
+      <div class="unit-detail-header">
+        <div class="unit-detail-icon-lg" id="d-icon-wrap"></div>
+        <div class="unit-detail-meta">
+          <h3 class="unit-detail-name" id="d-name"></h3>
+          <span class="unit-detail-role" id="d-role"></span>
+        </div>
+      </div>
+      <table class="unit-stats-table" id="d-stats"></table>
+      <div class="unit-detail-desc-section">
+        <p class="unit-detail-desc" id="d-desc"></p>
+      </div>
+      <div class="unit-detail-preview-section">
+        <span class="preview-section-label">Unit Preview</span>
+        <div class="unit-preview-placeholder" id="d-preview"></div>
       </div>
     </div>
-  </div>
-</section>
-
-<div class="subnav" style="--fc:#9b1c2c;">
-  <div class="container">
-    <a href="blackforce_info.html">Overview</a>
-    <a href="blackforce_structures.html">Structures</a>
-    <a href="blackforce_infantry.html" class="active">Infantry</a>
-    <a href="blackforce_units.html">Units</a>
-  </div>
-</div>
-
-<section>
-  <div class="container" style="--fc:#9b1c2c;">
-    <div class="section-head reveal">
-      <span class="section-tag" style="color:#9b1c2c;">Order of Battle</span>
-      <h2>The Black Force Infantry Roster</h2>
-      <p>Click a unit icon to view full stats, abilities, and tactical notes.</p>
-    </div>
-
-    <div class="unit-roster">
-      <div class="roster-category">Field Operatives</div>
-
-      <a href="unit_blackforce_phase.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Ph.Tpr</div></div>
-        <span class="unit-name">Phase Trooper</span>
-      </a>
-      <a href="unit_blackforce_scout.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Scout</div></div>
-        <span class="unit-name">Temporal Scout</span>
-      </a>
-      <a href="unit_blackforce_engineer.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Engr</div></div>
-        <span class="unit-name">Engineer</span>
-      </a>
-      <a href="unit_blackforce_temporal_shield.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">T.Shld</div></div>
-        <span class="unit-name">Temporal Shield</span>
-      </a>
-
-      <div class="roster-category">Specialist Operatives</div>
-
-      <a href="unit_blackforce_shift.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Shift</div></div>
-        <span class="unit-name">Shift Agent</span>
-      </a>
-      <a href="unit_blackforce_void.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Void</div></div>
-        <span class="unit-name">Void Commando</span>
-      </a>
-      <a href="unit_blackforce_rift_walker.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">R.Walk</div></div>
-        <span class="unit-name">Rift Walker</span>
-      </a>
-      <a href="unit_blackforce_paradox.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Prdx</div></div>
-        <span class="unit-name">Paradox Soldier</span>
-      </a>
-    </div>
-  </div>
-</section>
-
+</div></section>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-bottom">
@@ -107,7 +63,74 @@
     </div>
   </div>
 </footer>
-
+<script>
+const UNITS=[
+{id:'phase_trooper',name:'Phase Trooper',role:'Standard Infantry',abbr:'Ph.Tpr',icon:'icons/bf_phase_trooper.png',prereq:'BF Barracks',cost:'$300',primary:'Phase Rifle (Special)',armor:'Medium',speed:'7',sight:'5',range:'5',special:'Brief Phase-Out After Firing',desc:'Black Force standard infantry. Fires a phase rifle that destabilizes target matter on impact. Briefly phases out after each shot, becoming momentarily immune to return fire.'},
+{id:'temporal_scout',name:'Temporal Scout',role:'Scout / Recon',abbr:'Scout',icon:'icons/bf_temporal_scout.png',prereq:'BF Barracks',cost:'$200',primary:'Temporal Pistol (Special)',armor:'Light',speed:'11',sight:'9',range:'3',special:'Passive Radar Stealth',desc:'Fast recon infantry permanently invisible to enemy radar. Marks enemy positions and relays targeting data to Black Force artillery. Cannot sustain combat.'},
+{id:'engineer',name:'Engineer',role:'Capture &amp; Repair',abbr:'Engr',icon:'icons/bf_engineer.png',prereq:'BF Barracks',cost:'$500',primary:'Unarmed',armor:'None',speed:'5',sight:'5',range:'—',special:'Capture / Repair Structures',desc:'Captures and repairs structures. Like all engineers, completely unarmed and entirely dependent on escort.'},
+{id:'temporal_shield',name:'Temporal Shield',role:'Support Defender',abbr:'T.Shld',icon:'icons/bf_temporal_shield.png',prereq:'BF Barracks',cost:'$600',primary:'Unarmed',armor:'Heavy',speed:'4',sight:'5',range:'—',special:'Temporal Bubble — Friendly Units',desc:'Projects a temporal bubble around nearby friendly units making them briefly invulnerable. Cannot attack. Deployed behind frontline units to absorb a first strike.'},
+{id:'shift_agent',name:'Shift Agent',role:'Infiltration / Sabotage',abbr:'Shift',icon:'icons/bf_shift_agent.png',prereq:'BF Barracks',cost:'$1,200',primary:'Temporal Blade (Special)',armor:'Light',speed:'8',sight:'7',range:'1',special:'Short-Range Teleport',desc:'Can teleport short distances to bypass walls and defenses entirely. Kills infantry instantly on contact with the temporal blade.'},
+{id:'void_commando',name:'Void Commando',role:'Elite Operative',abbr:'Void',icon:'icons/bf_void_commando.png',prereq:'Battle Core',cost:'$1,800',primary:'Void Cannon / Temporal C4 (Special)',armor:'Medium',speed:'8',sight:'8',range:'7',special:'Void Phase + Demolitions',desc:'Enters the void between timelines to become untargetable, then re-emerges behind defenses. Plants temporal charges that collapse target structures into fractured space.'},
+{id:'rift_walker',name:'Rift Walker',role:'Heavy Assault',abbr:'R.Walk',icon:'icons/bf_rift_walker.png',prereq:'Battle Core',cost:'$1,000',primary:'Rift Pulse Cannon (Special)',armor:'Heavy',speed:'6',sight:'6',range:'6',special:'Periodic Phase Armor',desc:'Heavy infantry in phase-reinforced armor. Periodically phases out body segments — incoming projectiles pass harmlessly through. Devastating in sustained firefights.'},
+{id:'paradox_soldier',name:'Paradox Soldier',role:'Elite Infantry',abbr:'Prdx',icon:'icons/bf_paradox_soldier.png',prereq:'Battle Core',cost:'$2,000',primary:'Paradox Rifle (Special)',armor:'Heavy',speed:'6',sight:'7',range:'7',special:'Duplicates on Death',desc:'When killed, briefly creates a paradox duplicate that continues fighting before dissolving. Enemy commanders face the unsettling experience of killing the same soldier twice.'},
+];
+</script>
 <script src="script.js"></script>
-</body>
-</html>
+<script>
+/* Shared roster logic — identical across all category pages */
+const card  = document.getElementById('detail-card');
+const dIconW= document.getElementById('d-icon-wrap');
+const dName = document.getElementById('d-name');
+const dRole = document.getElementById('d-role');
+const dStats= document.getElementById('d-stats');
+const dDesc = document.getElementById('d-desc');
+const dPrev = document.getElementById('d-preview');
+
+const STAT_FIELDS = [
+  ['Prerequisite','prereq'],['Cost','cost'],['Primary','primary'],
+  ['Secondary','secondary'],['Armor Type','armor'],['Speed','speed'],
+  ['Sight','sight'],['Range','range'],['Special','special']
+];
+
+function showUnit(id){
+  const u = UNITS.find(x=>x.id===id);
+  if(!u) return;
+  card.classList.add('switching');
+  setTimeout(()=>{
+    /* icon */
+    if(u.icon){
+      dIconW.innerHTML = `<img src="${u.icon}" alt="${u.name}" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>${u.abbr}</div>'">`;
+    } else {
+      dIconW.innerHTML = `<div class="unit-icon-placeholder">${u.abbr}</div>`;
+    }
+    dName.textContent = u.name;
+    dRole.textContent = u.role;
+    /* stats table */
+    dStats.innerHTML = STAT_FIELDS
+      .filter(([,k])=>u[k]&&u[k]!=='—')
+      .map(([label,k])=>`<tr><td class="stat-k">${label}</td><td class="stat-v">${u[k]}</td></tr>`)
+      .join('');
+    /* description */
+    dDesc.textContent = u.desc;
+    /* preview */
+    if(u.preview){
+      dPrev.innerHTML = `<img src="${u.preview}" alt="${u.name} preview">`;
+    } else {
+      dPrev.textContent = '// Unit preview — placeholder';
+    }
+    card.classList.remove('switching');
+  },100);
+}
+
+document.querySelectorAll('[data-uid]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('[data-uid]').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    showUnit(btn.dataset.uid);
+    card.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+});
+const first=document.querySelector('[data-uid]');
+if(first){first.classList.add('active');showUnit(first.dataset.uid);}
+</script>
+</body></html>

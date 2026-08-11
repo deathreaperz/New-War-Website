@@ -3,20 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yuri Infantry — Yuri's Revenge: New War</title>
-<meta name="description" content="Yuri infantry roster for Yuri's Revenge: New War.">
+<title>Infantry — Yuri — Yuri's Revenge: New War</title>
+<meta name="description" content="Yuri Infantry roster for Yuris Revenge: New War.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="site-header">
   <nav class="nav">
-    <a href="index.html" class="brand">
-      <span class="b1">NEW WAR</span>
-      <span class="b2">YURI'S REVENGE</span>
-    </a>
+    <a href="index.html" class="brand"><span class="b1">NEW WAR</span><span class="b2">YURI'S REVENGE</span></a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="story.html">Story</a></li>
@@ -27,89 +23,40 @@
     <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
   </nav>
 </header>
-
-<section class="page-hero" style="--fc:#c23fd4;">
-  <div class="container">
-    <div class="fx-head reveal">
-      <svg class="fx-icon-lg" viewBox="0 0 48 48" fill="none" stroke="#c23fd4" stroke-width="2" style="width:64px;height:64px;"><ellipse cx="24" cy="24" rx="19" ry="11"/><circle cx="24" cy="24" r="5"/></svg>
-      <div>
-        <span class="eyebrow" style="color:#c23fd4;">Faction Three &mdash; Yuri</span>
-        <h1 class="mt-0">Infantry</h1>
+<section class="page-hero" style="--fc:#c23fd4;"><div class="container"><div class="fx-head reveal"><svg class="fx-icon-lg" viewBox="0 0 48 48" fill="none" stroke="#c23fd4" stroke-width="2" style="width:64px;height:64px;"><ellipse cx="24" cy="24" rx="19" ry="11"/><circle cx="24" cy="24" r="5"/></svg><div><span class="eyebrow" style="color:#c23fd4;">Faction Three &mdash; Yuri</span><h1 class="mt-0">Infantry</h1></div></div></div></section>
+<div class="subnav" style="--fc:#c23fd4;"><div class="container"><a href="yuri_info.html">Overview</a><a href="yuri_infantry.html" class="active">Infantry</a><a href="yuri_units.html">Units</a><a href="yuri_structures.html">Structures</a></div></div>
+<section style="padding:48px 0 80px;"><div class="container" style="--fc:#c23fd4;">
+<div class="section-head reveal" style="margin-bottom:28px;"><span class="section-tag" style="color:#c23fd4;">Order of Battle</span><h2>Yuri Infantry</h2><p>Select a unit icon to view full stats and tactical notes.</p></div>
+<div class="unit-roster" id="palette">
+<button class="unit-entry" data-uid="initiate"><div class="unit-icon-box"><img src="icons/yuri_initiate.png" alt="Initiate" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Init</div>'"></div><span class="unit-name">Initiate</span></button>
+<button class="unit-entry" data-uid="brute"><div class="unit-icon-box"><img src="icons/yuri_brute.png" alt="Brute" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Brute</div>'"></div><span class="unit-name">Brute</span></button>
+<button class="unit-entry" data-uid="engineer"><div class="unit-icon-box"><img src="icons/yuri_engineer.png" alt="Engineer" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Engr</div>'"></div><span class="unit-name">Engineer</span></button>
+<button class="unit-entry" data-uid="pyro"><div class="unit-icon-box"><img src="icons/yuri_pyro.png" alt="Pyro" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Pyro</div>'"></div><span class="unit-name">Pyro</span></button>
+<button class="unit-entry" data-uid="virus"><div class="unit-icon-box"><img src="icons/yuri_virus.png" alt="Virus" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Virus</div>'"></div><span class="unit-name">Virus</span></button>
+<button class="unit-entry" data-uid="mastermind"><div class="unit-icon-box"><img src="icons/yuri_mastermind.png" alt="Master Mind" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>M.Mind</div>'"></div><span class="unit-name">Master Mind</span></button>
+<button class="unit-entry" data-uid="psi_cmd"><div class="unit-icon-box"><img src="icons/yuri_psi_cmd.png" alt="Psi-Commando" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Psi</div>'"></div><span class="unit-name">Psi-Commando</span></button>
+<button class="unit-entry" data-uid="clairvoyant"><div class="unit-icon-box"><img src="icons/yuri_clairvoyant.png" alt="Clairvoyant" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Clair</div>'"></div><span class="unit-name">Clairvoyant</span></button>
+<button class="unit-entry" data-uid="yuri_prime"><div class="unit-icon-box"><img src="icons/yuri_prime.png" alt="Yuri Prime" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Y.Prm</div>'"></div><span class="unit-name">Yuri Prime</span></button>
+<button class="unit-entry" data-uid="mantis"><div class="unit-icon-box"><img src="icons/yuri_mantis.png" alt="Mantis" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>Mant</div>'"></div><span class="unit-name">Mantis</span></button>
+</div>
+    <div class="unit-detail-card" id="detail-card">
+      <div class="unit-detail-header">
+        <div class="unit-detail-icon-lg" id="d-icon-wrap"></div>
+        <div class="unit-detail-meta">
+          <h3 class="unit-detail-name" id="d-name"></h3>
+          <span class="unit-detail-role" id="d-role"></span>
+        </div>
+      </div>
+      <table class="unit-stats-table" id="d-stats"></table>
+      <div class="unit-detail-desc-section">
+        <p class="unit-detail-desc" id="d-desc"></p>
+      </div>
+      <div class="unit-detail-preview-section">
+        <span class="preview-section-label">Unit Preview</span>
+        <div class="unit-preview-placeholder" id="d-preview"></div>
       </div>
     </div>
-  </div>
-</section>
-
-<div class="subnav" style="--fc:#c23fd4;">
-  <div class="container">
-    <a href="yuri_info.html">Overview</a>
-    <a href="yuri_structures.html">Structures</a>
-    <a href="yuri_infantry.html" class="active">Infantry</a>
-    <a href="yuri_units.html">Units</a>
-  </div>
-</div>
-
-<section>
-  <div class="container" style="--fc:#c23fd4;">
-    <div class="section-head reveal">
-      <span class="section-tag" style="color:#c23fd4;">Order of Battle</span>
-      <h2>Yuri infantry roster</h2>
-      <p>Click a unit icon to view full stats, abilities, and tactical notes.</p>
-    </div>
-
-    <div class="unit-roster">
-      <div class="roster-category">Standard Infantry</div>
-
-      <a href="unit_yuri_initiate.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Init</div></div>
-        <span class="unit-name">Initiate</span>
-      </a>
-      <a href="unit_yuri_brute.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Brute</div></div>
-        <span class="unit-name">Brute</span>
-      </a>
-      <a href="unit_yuri_engineer.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Engr</div></div>
-        <span class="unit-name">Engineer</span>
-      </a>
-      <a href="unit_yuri_pyro.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Pyro</div></div>
-        <span class="unit-name">Pyro</span>
-      </a>
-
-      <div class="roster-category">Psychic Operatives</div>
-
-      <a href="unit_yuri_virus.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Virus</div></div>
-        <span class="unit-name">Virus</span>
-      </a>
-      <a href="unit_yuri_mastermind.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">M.Mind</div></div>
-        <span class="unit-name">Master Mind</span>
-      </a>
-      <a href="unit_yuri_psi.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Psi</div></div>
-        <span class="unit-name">Psi-Commando</span>
-      </a>
-      <a href="unit_yuri_clairvoyant.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Clair</div></div>
-        <span class="unit-name">Clairvoyant</span>
-      </a>
-      <a href="unit_yuri_yuri_prime.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Y.Prime</div></div>
-        <span class="unit-name">Yuri Prime</span>
-      </a>
-
-      <div class="roster-category">New War Units</div>
-
-      <a href="unit_yuri_mantis.html" class="unit-entry">
-        <div class="unit-icon-box"><div class="unit-icon-placeholder">Mant</div></div>
-        <span class="unit-name">Mantis</span>
-      </a>
-    </div>
-  </div>
-</section>
-
+</div></section>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-bottom">
@@ -118,7 +65,76 @@
     </div>
   </div>
 </footer>
-
+<script>
+const UNITS=[
+{id:'initiate',name:'Initiate',role:'Basic Infantry',abbr:'Init',icon:'icons/yuri_initiate.png',prereq:'Yuri Barracks',cost:'$100',primary:'Psychic Burst (Psi)',armor:'Flak',speed:'6',sight:'5',range:'4',special:'—',desc:'Basic Yuri infantry firing a psychic burst effective against infantry. Cheap and quick to produce, fielded in large numbers to overwhelm defenses through sheer volume.'},
+{id:'brute',name:'Brute',role:'Heavy Melee Infantry',abbr:'Brute',icon:'icons/yuri_brute.png',prereq:'Yuri Barracks',cost:'$600',primary:'Fists (Teeth)',armor:'Plate',speed:'6',sight:'5',range:'1',special:'Immune to Mind Control',desc:'Massive brawler immune to all psychic attacks and mind control. Tears apart infantry and lightly armored vehicles in close combat. Cannot fire at aircraft.'},
+{id:'engineer',name:'Engineer',role:'Capture &amp; Repair',abbr:'Engr',icon:'icons/yuri_engineer.png',prereq:'Yuri Barracks',cost:'$500',primary:'Unarmed',armor:'None',speed:'5',sight:'5',range:'—',special:'Capture / Repair Structures',desc:'Captures neutral and enemy structures and repairs Yuri buildings. Completely unarmed and dependent on escort to survive.'},
+{id:'pyro',name:'Pyro',role:'Incendiary',abbr:'Pyro',icon:'icons/yuri_pyro.png',prereq:'Yuri Barracks',cost:'$500',primary:'Flamethrower (Fire)',armor:'Flak',speed:'5',sight:'5',range:'4',special:'Sets Terrain on Fire',desc:'Fires a short-range flamethrower devastating against infantry clusters and light vehicles. Sets terrain on fire on impact, denying areas to enemy infantry for extended periods.'},
+{id:'virus',name:'Virus',role:'Sniper / Bio-Weapon',abbr:'Virus',icon:'icons/yuri_virus.png',prereq:'Yuri Barracks',cost:'$1,200',primary:'Bio Sniper Rifle (Radiation)',armor:'Flak',speed:'4',sight:'9',range:'8',special:'Toxic Death Cloud',desc:'Fires a biological round. Targets who die leave a toxic cloud that spreads to and kills nearby infantry — no line-of-sight required for secondary casualties.'},
+{id:'mastermind',name:'Master Mind',role:'Mass Mind Controller',abbr:'M.Mind',icon:'icons/yuri_mastermind.png',prereq:'Yuri Barracks',cost:'$1,500',primary:'Mind Control (Psi)',armor:'Medium',speed:'5',sight:'6',range:'7',special:'Controls up to 3 Units',desc:'Controls multiple enemy units at once. Overloading causes a psychic explosion destroying the Master Mind and all controlled units simultaneously. Use carefully near friendly forces.'},
+{id:'psi_cmd',name:'Psi-Commando',role:'Psychic Saboteur',abbr:'Psi',icon:'icons/yuri_psi_cmd.png',prereq:'Battle Lab',cost:'$1,500',primary:'Psychic Blast / C4 (Psi)',armor:'Plate',speed:'7',sight:'7',range:'5',special:'Psychic Stun + Demolitions',desc:'Stuns nearby enemy units with a psychic blast and plants C4 on structures. Combines commando demolitions capability with a psychic defense tool.'},
+{id:'clairvoyant',name:'Clairvoyant',role:'Intelligence Operative',abbr:'Clair',icon:'icons/yuri_clairvoyant.png',prereq:'Battle Lab',cost:'$1,000',primary:'Psychic Pulse (Psi)',armor:'Flak',speed:'5',sight:'8',range:'4',special:'Permanent Spy &amp; Stealth Reveal',desc:'Reveals all invisible and disguised units in a large permanent radius. Eliminates fog-of-war disadvantage against stealth-heavy factions.'},
+{id:'yuri_prime',name:'Yuri Prime',role:'Supreme Psychic',abbr:'Y.Prm',icon:'icons/yuri_prime.png',prereq:'Battle Lab',cost:'$2,000',primary:'Psychic Domination (Psi)',armor:'Plate',speed:'5',sight:'8',range:'8',special:'Permanent Mind Control + Clone Decoy',desc:'Controls any single unit indefinitely, including superunits. Can spawn a decoy clone of itself. One Yuri Prime can turn an entire battle alone.'},
+{id:'mantis',name:'Mantis',role:'Stealth Operative',abbr:'Mant',icon:'icons/yuri_mantis.png',prereq:'Battle Lab',cost:'$1,800',primary:'Psychic Blade (Psi)',armor:'Medium',speed:'8',sight:'8',range:'1',special:'Permanent Stealth',desc:'New War unit. Permanently cloaked. Kills infantry instantly on contact and can attach tracking devices to vehicles for remote detonation. Requires dedicated detection to counter.'},
+];
+</script>
 <script src="script.js"></script>
-</body>
-</html>
+<script>
+/* Shared roster logic — identical across all category pages */
+const card  = document.getElementById('detail-card');
+const dIconW= document.getElementById('d-icon-wrap');
+const dName = document.getElementById('d-name');
+const dRole = document.getElementById('d-role');
+const dStats= document.getElementById('d-stats');
+const dDesc = document.getElementById('d-desc');
+const dPrev = document.getElementById('d-preview');
+
+const STAT_FIELDS = [
+  ['Prerequisite','prereq'],['Cost','cost'],['Primary','primary'],
+  ['Secondary','secondary'],['Armor Type','armor'],['Speed','speed'],
+  ['Sight','sight'],['Range','range'],['Special','special']
+];
+
+function showUnit(id){
+  const u = UNITS.find(x=>x.id===id);
+  if(!u) return;
+  card.classList.add('switching');
+  setTimeout(()=>{
+    /* icon */
+    if(u.icon){
+      dIconW.innerHTML = `<img src="${u.icon}" alt="${u.name}" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>${u.abbr}</div>'">`;
+    } else {
+      dIconW.innerHTML = `<div class="unit-icon-placeholder">${u.abbr}</div>`;
+    }
+    dName.textContent = u.name;
+    dRole.textContent = u.role;
+    /* stats table */
+    dStats.innerHTML = STAT_FIELDS
+      .filter(([,k])=>u[k]&&u[k]!=='—')
+      .map(([label,k])=>`<tr><td class="stat-k">${label}</td><td class="stat-v">${u[k]}</td></tr>`)
+      .join('');
+    /* description */
+    dDesc.textContent = u.desc;
+    /* preview */
+    if(u.preview){
+      dPrev.innerHTML = `<img src="${u.preview}" alt="${u.name} preview">`;
+    } else {
+      dPrev.textContent = '// Unit preview — placeholder';
+    }
+    card.classList.remove('switching');
+  },100);
+}
+
+document.querySelectorAll('[data-uid]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('[data-uid]').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    showUnit(btn.dataset.uid);
+    card.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+});
+const first=document.querySelector('[data-uid]');
+if(first){first.classList.add('active');showUnit(first.dataset.uid);}
+</script>
+</body></html>
