@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Force Roster — Yuri's Revenge: New War</title>
+<meta name="description" content="Full Black Force unit, infantry and structure roster for Yuri's Revenge: New War.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand"><span class="b1">NEW WAR</span><span class="b2">YURI'S REVENGE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Story</a></li>
+      <li><a href="factions.html" class="active">Factions</a></li>
+      <li><a href="download.html">Download</a></li>
+    </ul>
+    <a href="download.html" class="nav-cta">Get the Mod</a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+</header>
+
+<section class="page-hero" style="--fc:#9b1c2c;">
+  <div class="container">
+    <div class="fx-head reveal">
+      <svg class="fx-icon-lg" viewBox="0 0 48 48" fill="none" stroke="#9b1c2c" stroke-width="2" style="width:64px;height:64px;"><circle cx="24" cy="24" r="18"/><path d="M13 24 C13 17 20 17 24 24 C28 31 35 31 35 24 C35 17 28 17 24 24 C20 31 13 31 13 24 Z"/></svg>
+      <div>
+        <span class="eyebrow" style="color:#9b1c2c;">Faction Four &mdash; Black Force</span>
+        <h1 class="mt-0">Full Roster</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="subnav" style="--fc:#9b1c2c;">
+  <div class="container">
+    <a href="blackforce_info.html">Overview</a>
+    <a href="blackforce_roster.html" class="active">Roster</a>
+  </div>
+</div>
+
+<section style="padding:48px 0 80px;">
+  <div class="container" style="--fc:#9b1c2c;">
+    <div class="section-head reveal" style="margin-bottom:28px;">
+      <span class="section-tag" style="color:#9b1c2c;">Order of Battle</span>
+      <h2>Black Force — Complete Roster</h2>
+      <p>Select a unit icon to view stats and details.</p>
+    </div>
+
+    <div class="unit-roster" id="palette">
+      <span class="palette-cat">Infantry</span>
+      <button class="unit-entry" data-uid="phase_trooper"><div class="unit-icon-box"><div class="unit-icon-placeholder">Ph.Tpr</div></div><span class="unit-name">Phase Trooper</span></button>
+      <button class="unit-entry" data-uid="temporal_scout"><div class="unit-icon-box"><div class="unit-icon-placeholder">Scout</div></div><span class="unit-name">Temporal Scout</span></button>
+      <button class="unit-entry" data-uid="engineer"><div class="unit-icon-box"><div class="unit-icon-placeholder">Engr</div></div><span class="unit-name">Engineer</span></button>
+      <button class="unit-entry" data-uid="temporal_shield"><div class="unit-icon-box"><div class="unit-icon-placeholder">T.Shld</div></div><span class="unit-name">Temporal Shield</span></button>
+      <button class="unit-entry" data-uid="shift_agent"><div class="unit-icon-box"><div class="unit-icon-placeholder">Shift</div></div><span class="unit-name">Shift Agent</span></button>
+      <button class="unit-entry" data-uid="void_commando"><div class="unit-icon-box"><div class="unit-icon-placeholder">Void</div></div><span class="unit-name">Void Commando</span></button>
+      <button class="unit-entry" data-uid="rift_walker"><div class="unit-icon-box"><div class="unit-icon-placeholder">R.Walk</div></div><span class="unit-name">Rift Walker</span></button>
+      <button class="unit-entry" data-uid="paradox_soldier"><div class="unit-icon-box"><div class="unit-icon-placeholder">Prdx</div></div><span class="unit-name">Paradox Soldier</span></button>
+
+      <span class="palette-cat">Vehicles</span>
+      <button class="unit-entry" data-uid="phase_tank"><div class="unit-icon-box"><div class="unit-icon-placeholder">Ph.Tnk</div></div><span class="unit-name">Phase Tank</span></button>
+      <button class="unit-entry" data-uid="temporal_disruptor"><div class="unit-icon-box"><div class="unit-icon-placeholder">Dsrpt</div></div><span class="unit-name">Temporal Disruptor</span></button>
+      <button class="unit-entry" data-uid="rift_carrier"><div class="unit-icon-box"><div class="unit-icon-placeholder">R.Carr</div></div><span class="unit-name">Rift Carrier</span></button>
+      <button class="unit-entry" data-uid="chrono_artillery"><div class="unit-icon-box"><div class="unit-icon-placeholder">Ch.Art</div></div><span class="unit-name">Chrono Artillery</span></button>
+      <button class="unit-entry" data-uid="paradox_engine"><div class="unit-icon-box"><div class="unit-icon-placeholder">Prdx E</div></div><span class="unit-name">Paradox Engine</span></button>
+
+      <span class="palette-cat">Aircraft</span>
+      <button class="unit-entry" data-uid="phase_fighter"><div class="unit-icon-box"><div class="unit-icon-placeholder">Ph.Ftr</div></div><span class="unit-name">Phase Fighter</span></button>
+      <button class="unit-entry" data-uid="void_drifter"><div class="unit-icon-box"><div class="unit-icon-placeholder">V.Drft</div></div><span class="unit-name">Void Drifter</span></button>
+
+      <span class="palette-cat">Naval</span>
+      <button class="unit-entry" data-uid="displacement_field"><div class="unit-icon-box"><div class="unit-icon-placeholder">Displ</div></div><span class="unit-name">Displacement Field</span></button>
+      <button class="unit-entry" data-uid="phase_cruiser"><div class="unit-icon-box"><div class="unit-icon-placeholder">Ph.Crs</div></div><span class="unit-name">Phase Cruiser</span></button>
+
+      <span class="palette-cat">Structures</span>
+      <button class="unit-entry" data-uid="bf_barracks"><div class="unit-icon-box"><div class="unit-icon-placeholder">Barr</div></div><span class="unit-name">BF Barracks</span></button>
+      <button class="unit-entry" data-uid="phase_factory"><div class="unit-icon-box"><div class="unit-icon-placeholder">Ph.Fct</div></div><span class="unit-name">Phase Factory</span></button>
+      <button class="unit-entry" data-uid="temporal_dock"><div class="unit-icon-box"><div class="unit-icon-placeholder">T.Dock</div></div><span class="unit-name">Temporal Dock</span></button>
+      <button class="unit-entry" data-uid="phase_reactor"><div class="unit-icon-box"><div class="unit-icon-placeholder">React</div></div><span class="unit-name">Phase Reactor</span></button>
+      <button class="unit-entry" data-uid="temporal_condenser"><div class="unit-icon-box"><div class="unit-icon-placeholder">Cond</div></div><span class="unit-name">Temporal Condenser</span></button>
+      <button class="unit-entry" data-uid="rift_cannon"><div class="unit-icon-box"><div class="unit-icon-placeholder">R.Cann</div></div><span class="unit-name">Rift Cannon</span></button>
+      <button class="unit-entry" data-uid="phase_barrier"><div class="unit-icon-box"><div class="unit-icon-placeholder">P.Barr</div></div><span class="unit-name">Phase Barrier</span></button>
+      <button class="unit-entry" data-uid="void_pulse"><div class="unit-icon-box"><div class="unit-icon-placeholder">V.Puls</div></div><span class="unit-name">Void Pulse Tower</span></button>
+      <button class="unit-entry" data-uid="temporal_nexus"><div class="unit-icon-box"><div class="unit-icon-placeholder">Nexus</div></div><span class="unit-name">Temporal Nexus</span></button>
+      <button class="unit-entry" data-uid="void_amplifier"><div class="unit-icon-box"><div class="unit-icon-placeholder">V.Amp</div></div><span class="unit-name">Void Amplifier</span></button>
+      <button class="unit-entry" data-uid="battle_core"><div class="unit-icon-box"><div class="unit-icon-placeholder">B.Core</div></div><span class="unit-name">Battle Core</span></button>
+      <button class="unit-entry" data-uid="paradox_core"><div class="unit-icon-box"><div class="unit-icon-placeholder">Prdx C</div></div><span class="unit-name">Paradox Core</span></button>
+      <button class="unit-entry" data-uid="chrono_displacer"><div class="unit-icon-box"><div class="unit-icon-placeholder">Ch.Dsp</div></div><span class="unit-name">Chrono Displacer</span></button>
+    </div>
+
+    <div class="unit-detail-card" id="detail-card">
+      <div class="unit-detail-header">
+        <div class="unit-detail-icon-lg"><div class="unit-icon-placeholder" id="d-abbr"></div></div>
+        <div class="unit-detail-meta">
+          <h3 class="unit-detail-name" id="d-name"></h3>
+          <div><span class="unit-detail-role" id="d-role"></span><span class="unit-detail-cat-tag" id="d-cat"></span></div>
+        </div>
+      </div>
+      <div class="unit-detail-body">
+        <div class="unit-detail-stats" id="d-stats"></div>
+        <div class="unit-detail-desc-col"><p class="unit-detail-desc" id="d-desc"></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; 2026 New War Modding Team. Fan-made, non-commercial.</span>
+      <span>Command &amp; Conquer: Red Alert 2 is a trademark of Electronic Arts Inc.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+const UNITS = [
+  // INFANTRY
+  {id:'phase_trooper',cat:'Infantry',name:'Phase Trooper',role:'Standard Infantry',abbr:'Ph.Tpr',cost:'$300',speed:'Medium',armor:'Medium',weapon:'Phase Rifle',special:'Brief Phase-Out on Fire',desc:'Black Force standard infantry. Fires a phase rifle that destabilizes target matter on impact. Briefly phases out of physical space after each shot, making it momentarily immune to return fire.'},
+  {id:'temporal_scout',cat:'Infantry',name:'Temporal Scout',role:'Scout / Recon',abbr:'Scout',cost:'$200',speed:'Very Fast',armor:'Light',weapon:'Temporal Pistol',special:'Passive Radar Stealth',desc:'Fast recon infantry invisible to enemy radar at all times. Marks enemy positions and relays targeting data to Black Force artillery. Cannot engage in sustained combat.'},
+  {id:'engineer',cat:'Infantry',name:'Engineer',role:'Capture / Repair',abbr:'Engr',cost:'$500',speed:'Medium',armor:'None',weapon:'Unarmed',special:'Capture & Repair Structures',desc:'Captures neutral and enemy structures and repairs Black Force buildings. Like all engineers, completely unarmed and dependent on escort to survive.'},
+  {id:'temporal_shield',cat:'Infantry',name:'Temporal Shield',role:'Support Defender',abbr:'T.Shld',cost:'$600',speed:'Slow',armor:'Heavy',weapon:'—',special:'Temporal Bubble (Friendly Units)',desc:'Projects a temporal bubble around nearby friendly units, making them briefly immune to all incoming damage. Cannot attack. Deployed behind frontline units to absorb an enemy first strike.'},
+  {id:'shift_agent',cat:'Infantry',name:'Shift Agent',role:'Infiltration / Sabotage',abbr:'Shift',cost:'$1,200',speed:'Fast',armor:'Light',weapon:'Temporal Blade',special:'Teleport Short Distance',desc:'Can teleport short distances to bypass walls and defenses entirely. Kills infantry instantly on contact with the temporal blade. Infiltrates structures by teleporting past walls.'},
+  {id:'void_commando',cat:'Infantry',name:'Void Commando',role:'Elite Operative',abbr:'Void',cost:'$1,800',speed:'Fast',armor:'Medium',weapon:'Void Cannon / Temporal C4',special:'Void Phase + Demolitions',desc:'Enters the void between timelines briefly to become completely untargetable, then re-emerges behind defenses. Plants temporal charges that collapse target structures into fractured space.'},
+  {id:'rift_walker',cat:'Infantry',name:'Rift Walker',role:'Heavy Assault',abbr:'R.Walk',cost:'$1,000',speed:'Medium',armor:'Heavy',weapon:'Rift Pulse Cannon',special:'Phase Armor (Periodic)',desc:'Heavy infantry in phase-reinforced armor. Periodically phases out entire body segments, causing incoming projectiles to pass harmlessly through it. Devastating in sustained firefights.'},
+  {id:'paradox_soldier',cat:'Infantry',name:'Paradox Soldier',role:'New War Paradox Elite',abbr:'Prdx',cost:'$2,000',speed:'Medium',armor:'Heavy',weapon:'Paradox Rifle',special:'Duplicates on Death',desc:'When killed, briefly creates a paradox duplicate of itself that continues fighting for a short time before dissolving. Enemy commanders face the unsettling experience of killing the same soldier twice.'},
+  // VEHICLES
+  {id:'phase_tank',cat:'Vehicle',name:'Phase Tank',role:'Main Battle Tank',abbr:'Ph.Tnk',cost:'$1,000',speed:'Fast',armor:'Heavy',weapon:'Phase Cannon',special:'Phase Shift (Dodge)',desc:'Black Force primary armor. Fires a phase cannon that destabilizes target integrity on impact. Can briefly phase out to avoid incoming fire, reappearing behind or beside the threat.'},
+  {id:'temporal_disruptor',cat:'Vehicle',name:'Temporal Disruptor',role:'Anti-Vehicle / Debuffer',abbr:'Dsrpt',cost:'$1,200',speed:'Medium',armor:'Medium',weapon:'Temporal Disruption Field',special:'Slows All Nearby Enemies',desc:'Projects a temporal disruption field that significantly slows the movement and fire rate of all enemy units within range. Does not deal high damage but cripples entire armies for follow-up strikes.'},
+  {id:'rift_carrier',cat:'Vehicle',name:'Rift Carrier',role:'Infantry Transport',abbr:'R.Carr',cost:'$800',speed:'Fast',armor:'Medium',weapon:'Rift Gun',special:'Rapid Teleport Deploy',desc:'Armored transport that can teleport its cargo of infantry to any nearby point instead of driving them there. Deploys troops inside enemy lines in an instant.'},
+  {id:'chrono_artillery',cat:'Vehicle',name:'Chrono Artillery',role:'Long-Range Artillery',abbr:'Ch.Art',cost:'$1,400',speed:'Slow',armor:'Medium',weapon:'Temporal Shell',special:'Bypasses Terrain',desc:'Fires temporal shells that phase through terrain and obstacles, arriving at the target regardless of walls or geography in between. Cannot miss due to terrain — only distance limits it.'},
+  {id:'paradox_engine',cat:'Vehicle',name:'Paradox Engine',role:'Superunit',abbr:'Prdx E',cost:'$3,000',speed:'Medium',armor:'Very Heavy',weapon:'Paradox Cannon + Phase Field',special:'Paradox Resonance (AoE)',desc:'Black Force\'s heaviest unit. Fires a paradox cannon that creates a destabilizing resonance field around the impact point, causing other nearby units to fragment. Extremely difficult to destroy due to periodic phase cycling.'},
+  // AIRCRAFT
+  {id:'phase_fighter',cat:'Aircraft',name:'Phase Fighter',role:'Air Superiority',abbr:'Ph.Ftr',cost:'$1,200',speed:'Very Fast',armor:'Light',weapon:'Phase Missiles',special:'Phase Dodge vs Missiles',desc:'Highly agile interceptor that phases through incoming missiles rather than trying to outrun them. Dominates the airspace in one-on-one and group engagements alike.'},
+  {id:'void_drifter',cat:'Aircraft',name:'Void Drifter',role:'Strategic Bomber',abbr:'V.Drft',cost:'$2,000',speed:'Medium',armor:'Medium',weapon:'Void Bomb',special:'Drops Into Void Before Impact',desc:'Drops a void bomb that dips briefly into fractured space before re-emerging directly above the target, bypassing all anti-air defenses positioned between the bomber and the target.'},
+  // NAVAL
+  {id:'displacement_field',cat:'Naval',name:'Displacement Field',role:'Naval Disruption Vessel',abbr:'Displ',cost:'$1,000',speed:'Medium',armor:'Medium',weapon:'Displacement Wave',special:'Teleports Enemy Vessels Off Position',desc:'Fires a displacement wave that teleports enemy naval vessels to random nearby positions, breaking formations and confusing fleet coordination. Devastating against tightly grouped fleets.'},
+  {id:'phase_cruiser',cat:'Naval',name:'Phase Cruiser',role:'Naval Assault Ship',abbr:'Ph.Crs',cost:'$1,800',speed:'Medium',armor:'Heavy',weapon:'Phase Torpedo / Phase Cannon',special:'Partial Phase Armor',desc:'Black Force primary warship. Fires phase torpedoes at naval targets and phase cannon salvoes at shore targets. Partially phases out when taking sustained fire, reducing effective damage by a significant margin.'},
+  // STRUCTURES
+  {id:'bf_barracks',cat:'Structure',name:'Black Force Barracks',role:'Infantry Production',abbr:'Barr',cost:'$400',speed:'—',armor:'Medium',weapon:'—',special:'—',desc:'Produces all Black Force infantry. The entry-level structure — build early to field Phase Troopers and Temporal Scouts as quickly as possible.'},
+  {id:'phase_factory',cat:'Structure',name:'Phase Factory',role:'Vehicle Production',abbr:'Ph.Fct',cost:'$1,000',speed:'—',armor:'Medium',weapon:'—',special:'—',desc:'Builds all Black Force ground vehicles. Required before Phase Tanks and Temporal Disruptors enter production.'},
+  {id:'temporal_dock',cat:'Structure',name:'Temporal Dock',role:'Naval & Air Production',abbr:'T.Dock',cost:'$1,200',speed:'—',armor:'Heavy',weapon:'—',special:'Produces Naval & Air',desc:'A combined production facility for both naval units and aircraft. Unique to Black Force — no separate shipyard and airfield required, saving valuable base space.'},
+  {id:'phase_reactor',cat:'Structure',name:'Phase Reactor',role:'Power Generation',abbr:'React',cost:'$500',speed:'—',armor:'Medium',weapon:'—',special:'Phase Surge on Overload',desc:'Generates base power for Black Force structures. If destroyed, releases a brief phase surge that damages nearby units of all factions — including attackers.'},
+  {id:'temporal_condenser',cat:'Structure',name:'Temporal Condenser',role:'Economy',abbr:'Cond',cost:'$1,800',speed:'—',armor:'Medium',weapon:'—',special:'Extracts Credits from Time Flux',desc:'Generates a steady income by drawing energy from local temporal distortions. Does not require ore — Black Force economy runs on the fracture itself rather than physical resources.'},
+  {id:'rift_cannon',cat:'Structure',name:'Rift Cannon',role:'Primary Anti-Ground Defense',abbr:'R.Cann',cost:'$1,500',speed:'—',armor:'Medium',weapon:'Rift Beam',special:'Phases Through Cover',desc:'Fires a rift beam that phases through terrain, walls, and other obstacles to strike targets that would be shielded against conventional weapons. Does not miss due to terrain.'},
+  {id:'phase_barrier',cat:'Structure',name:'Phase Barrier',role:'Defensive Wall',abbr:'P.Barr',cost:'$500',speed:'—',armor:'Very Heavy',weapon:'—',special:'Periodic Phase Immunity',desc:'A barrier wall that periodically phases out of physical space, becoming temporarily immune to all damage for a few seconds before rematerializing. Enemy forces must time their attacks around the phase cycle.'},
+  {id:'void_pulse',cat:'Structure',name:'Void Pulse Tower',role:'Anti-Air Defense',abbr:'V.Puls',cost:'$1,000',speed:'—',armor:'Medium',weapon:'Void Pulse',special:'Auto-Fire vs Air & Ground',desc:'Fires a void pulse effective against both aerial and light ground targets. The only Black Force defense with a dual ground/air role. Build at base perimeters and naval approach vectors.'},
+  {id:'temporal_nexus',cat:'Structure',name:'Temporal Nexus',role:'Intelligence / Radar',abbr:'Nexus',cost:'$1,000',speed:'—',armor:'Light',weapon:'—',special:'Radar + Temporal Awareness',desc:'Provides minimap radar and enables the Black Force\'s temporal awareness — brief flashes of enemy future positions on the minimap. Destroying it removes both intel streams simultaneously.'},
+  {id:'void_amplifier',cat:'Structure',name:'Void Amplifier',role:'Support',abbr:'V.Amp',cost:'$1,500',speed:'—',armor:'Medium',weapon:'—',special:'Boosts Phase Range & Duration',desc:'Amplifies phase-shift duration and range for all friendly units in the surrounding area. Multiple Amplifiers stack. Required before constructing the Paradox Core superweapon.'},
+  {id:'battle_core',cat:'Structure',name:'Battle Core',role:'Advanced Technology',abbr:'B.Core',cost:'$2,000',speed:'—',armor:'Medium',weapon:'—',special:'Unlocks Advanced Units',desc:'Unlocks Black Force\'s most advanced units and superweapons, including the Paradox Engine and Chrono Displacer. A high-priority demolition target for any opposing commander.'},
+  {id:'paradox_core',cat:'Structure',name:'Paradox Core',role:'Superweapon',abbr:'Prdx C',cost:'$5,000',speed:'—',armor:'Heavy',weapon:'Paradox Wave',special:'Reverses Enemy Unit Positions',desc:'Charges over time, then fires a paradox wave across a target area. All enemy units in the zone are teleported to randomized positions across the map — scattered and disorganized. Their production queues reset.'},
+  {id:'chrono_displacer',cat:'Structure',name:'Chrono Displacer',role:'Superweapon',abbr:'Ch.Dsp',cost:'$5,000',speed:'—',armor:'Heavy',weapon:'Temporal Displacement',special:'Displaces Friendly Units Anywhere',desc:'Charges over time, then instantly teleports any group of friendly units to any location on the map — including the heart of an enemy base. Unlike the Chronosphere, it works on all unit types without side effects.'},
+];
+
+const card = document.getElementById('detail-card');
+const dAbbr = document.getElementById('d-abbr');
+const dName = document.getElementById('d-name');
+const dRole = document.getElementById('d-role');
+const dCat  = document.getElementById('d-cat');
+const dStats= document.getElementById('d-stats');
+const dDesc = document.getElementById('d-desc');
+
+function showUnit(id) {
+  const u = UNITS.find(x => x.id === id);
+  if (!u) return;
+  card.classList.add('switching');
+  setTimeout(() => {
+    dAbbr.textContent = u.abbr;
+    dName.textContent = u.name;
+    dRole.textContent = u.role;
+    dCat.textContent  = '\u2014\u00a0' + u.cat;
+    dStats.innerHTML  =
+      `<div class="stat-row"><span class="stat-key">Cost</span><span class="stat-val">${u.cost}</span></div>` +
+      `<div class="stat-row"><span class="stat-key">Speed</span><span class="stat-val">${u.speed}</span></div>` +
+      `<div class="stat-row"><span class="stat-key">Armor</span><span class="stat-val">${u.armor}</span></div>` +
+      `<div class="stat-row"><span class="stat-key">Weapon</span><span class="stat-val">${u.weapon}</span></div>` +
+      `<div class="stat-row"><span class="stat-key">Special</span><span class="stat-val">${u.special}</span></div>`;
+    dDesc.textContent = u.desc;
+    card.classList.remove('switching');
+  }, 100);
+}
+
+document.querySelectorAll('[data-uid]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-uid]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    showUnit(btn.dataset.uid);
+    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+});
+
+const first = document.querySelector('[data-uid]');
+if (first) { first.classList.add('active'); showUnit(first.dataset.uid); }
+</script>
+</body>
+</html>

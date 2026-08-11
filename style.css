@@ -483,3 +483,87 @@ html.js .reveal.in{ opacity:1; transform:none; }
   letter-spacing:.04em; text-align:center; padding:3px;
   opacity:.7;
 }
+
+/* ============================================================
+   COMBINED ROSTER — PALETTE + DETAIL PANEL
+   ============================================================ */
+button.unit-entry{
+  background:none; border:none; cursor:pointer; padding:0; font-family:inherit;
+}
+button.unit-entry.active .unit-icon-box{
+  border-color: var(--fc, var(--rift-violet));
+  box-shadow: 0 0 10px rgba(0,0,0,.55), inset 0 0 0 1px var(--fc, var(--rift-violet));
+}
+button.unit-entry.active .unit-name{ color:var(--paper); }
+
+.unit-detail-card{
+  background: var(--panel-2);
+  border:1px solid var(--line);
+  border-left: 3px solid var(--fc, var(--rift-violet));
+  overflow:hidden;
+  transition: opacity .1s ease;
+}
+.unit-detail-card.switching{ opacity:.35; pointer-events:none; }
+
+.unit-detail-header{
+  display:flex; align-items:flex-start; gap:20px;
+  padding: 20px 24px;
+  border-bottom:1px solid var(--line);
+  background: var(--panel);
+}
+.unit-detail-icon-lg{
+  width:120px; height:96px; flex-shrink:0;
+  border:1px solid var(--line); background: var(--void);
+  overflow:hidden;
+}
+.unit-detail-icon-lg .unit-icon-placeholder{
+  font-size:.85rem; opacity:.55;
+  width:100%; height:100%;
+}
+.unit-detail-meta{ flex:1; min-width:0; }
+.unit-detail-name{ font-size:1.45rem; color:var(--paper); margin:0 0 6px; }
+.unit-detail-role{
+  font-family:var(--font-mono); font-size:.7rem; letter-spacing:.12em;
+  color:var(--fc, var(--rift-violet)); text-transform:uppercase;
+}
+.unit-detail-cat-tag{
+  font-family:var(--font-mono); font-size:.68rem; letter-spacing:.1em;
+  color:var(--steel-dim); text-transform:uppercase; margin-left:10px;
+}
+
+.unit-detail-body{
+  display:grid; grid-template-columns:220px 1fr;
+}
+.unit-detail-stats{
+  padding:16px 20px;
+  border-right:1px solid var(--line);
+}
+.stat-row{
+  display:flex; flex-direction:column; gap:2px;
+  padding:8px 0; border-bottom:1px solid var(--line);
+}
+.stat-row:last-child{ border-bottom:none; }
+.stat-key{
+  font-family:var(--font-mono); font-size:.62rem; letter-spacing:.14em;
+  color:var(--steel-dim); text-transform:uppercase;
+}
+.stat-val{ font-size:.9rem; color:var(--paper); }
+.unit-detail-desc-col{ padding:16px 24px; }
+.unit-detail-desc{ font-size:.95rem; color:var(--steel); line-height:1.74; margin:0; }
+
+.palette-cat{
+  width:100%;
+  font-family:var(--font-mono); font-size:.68rem; letter-spacing:.16em;
+  color:var(--fc, var(--rift-violet)); text-transform:uppercase;
+  padding:10px 0 4px;
+  border-bottom:1px solid var(--line);
+  margin-top:18px; margin-bottom:2px;
+}
+.palette-cat:first-child{ margin-top:0; }
+
+@media(max-width:640px){
+  .unit-detail-body{ grid-template-columns:1fr; }
+  .unit-detail-stats{ border-right:none; border-bottom:1px solid var(--line); }
+  .unit-detail-header{ gap:14px; }
+  .unit-detail-icon-lg{ width:80px; height:64px; }
+}
