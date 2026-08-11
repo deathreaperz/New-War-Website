@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download — Yuri's Revenge: New War</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .req-table{ width:100%; border-collapse:collapse; margin-top:8px; }
+  .req-table th,.req-table td{ text-align:left; padding:12px 16px; border-bottom:1px solid var(--line); font-size:.95rem; }
+  .req-table th{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.12em; color:var(--steel-dim); text-transform:uppercase; }
+  .req-table td:first-child{ color:var(--paper); font-weight:500; width:180px; }
+  .step{ display:flex; gap:20px; padding: 22px 0; border-bottom:1px solid var(--line); }
+  .step:last-child{ border-bottom:none; }
+  .step .step-num{
+    font-family:var(--font-display); font-weight:700; font-size:1.3rem; color: var(--rift-violet);
+    width:40px; flex-shrink:0;
+  }
+  .step h3{ font-size:1.05rem; margin-bottom:6px; color:var(--paper); }
+  .dl-card{
+    background: var(--panel-2); border:1px solid var(--line); border-left:3px solid var(--rift-cyan);
+    padding: 30px 32px; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap;
+  }
+  .dl-card .meta{ font-family:var(--font-mono); font-size:.78rem; color:var(--steel-dim); margin-top:6px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="b1">NEW WAR</span>
+      <span class="b2">YURI'S REVENGE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Story</a></li>
+      <li><a href="factions.html">Factions</a></li>
+      <li><a href="download.html" class="active">Download</a></li>
+    </ul>
+    <a href="download.html" class="nav-cta">Get the Mod</a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Deployment</span>
+    <h1>Download New War</h1>
+    <p>Free, unofficial, and built on the Ares DLL. You'll need a legal copy of Command &amp; Conquer: Red Alert 2 — Yuri's Revenge to play.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width:760px;">
+    <div class="dl-card reveal">
+      <div>
+        <h3 style="margin-bottom:4px;">New War — Full Installer</h3>
+        <span class="meta">v0.9 Public Preview &middot; ~1.8 GB &middot; Windows</span>
+      </div>
+      <a href="#" class="btn btn-primary">Download</a>
+    </div>
+  </div>
+</section>
+
+<section class="panel-bg">
+  <div class="container" style="max-width:760px;">
+    <div class="section-head reveal">
+      <span class="section-tag">Before you install</span>
+      <h2>System requirements</h2>
+    </div>
+    <table class="req-table reveal">
+      <thead>
+        <tr><th>Component</th><th>Minimum</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Base game</td><td>Command &amp; Conquer: Red Alert 2 — Yuri's Revenge (legally owned)</td></tr>
+        <tr><td>OS</td><td>Windows 10 / 11 (64-bit)</td></tr>
+        <tr><td>Storage</td><td>3 GB free space</td></tr>
+        <tr><td>Dependencies</td><td>Ares DLL (bundled with installer)</td></tr>
+        <tr><td>Compatibility layer</td><td>Not required on modern Windows; XP-era wrappers not supported</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width:760px;">
+    <div class="section-head reveal">
+      <span class="section-tag">Getting started</span>
+      <h2>Installation</h2>
+    </div>
+    <div class="reveal">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div><h3>Install the base game</h3><p>Make sure Command &amp; Conquer: Red Alert 2 and the Yuri's Revenge expansion are both installed and patched to their latest official version.</p></div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div><h3>Run the New War installer</h3><p>Download the installer above and point it at your existing Yuri's Revenge install folder. It handles the Ares DLL and all mod files automatically.</p></div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div><h3>Launch from the New War shortcut</h3><p>Use the New War desktop shortcut created by the installer, not your original game shortcut, to make sure the mod loads correctly.</p></div>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <div><h3>Join the community</h3><p>Hop into our Discord for patch notes, matchmaking, and to report anything that looks broken.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="panel-bg">
+  <div class="container text-center" style="max-width:600px;">
+    <span class="section-tag">Need help?</span>
+    <h2>Installation issues happen</h2>
+    <p>If something doesn't launch, check our Discord's #support channel before opening a bug report — most install issues have a quick fix.</p>
+    <a href="#" class="btn btn-ghost">Join the Discord</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; 2026 New War Modding Team. Fan-made, non-commercial.</span>
+      <span>Command &amp; Conquer: Red Alert 2 is a trademark of Electronic Arts Inc.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

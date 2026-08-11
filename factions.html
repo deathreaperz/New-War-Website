@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Factions — Yuri's Revenge: New War</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .fx-block{ padding: 70px 0; border-bottom: 1px solid var(--line); }
+  .fx-head{ display:flex; align-items:flex-start; gap:22px; margin-bottom:26px; flex-wrap:wrap; }
+  .fx-head .fx-icon-lg{ width:64px; height:64px; flex-shrink:0; }
+  .fx-stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:30px; }
+  .fx-stat{ background:var(--panel-2); border:1px solid var(--line); padding:16px 18px; }
+  .fx-stat .k{ font-family:var(--font-mono); font-size:.68rem; letter-spacing:.14em; color:var(--steel-dim); text-transform:uppercase; display:block; margin-bottom:6px; }
+  .fx-stat .v{ font-family:var(--font-display); font-weight:700; font-size:1.1rem; }
+  @media (max-width:620px){ .fx-stats{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="b1">NEW WAR</span>
+      <span class="b2">YURI'S REVENGE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Story</a></li>
+      <li><a href="factions.html" class="active">Factions</a></li>
+      <li><a href="download.html">Download</a></li>
+    </ul>
+    <a href="download.html" class="nav-cta">Get the Mod</a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Order of Battle</span>
+    <h1>Four powers, one fracture</h1>
+    <p>Two old superpowers, one psychic remnant, and one force that shouldn't exist yet. Here's who's fighting through the broken timeline.</p>
+  </div>
+</section>
+
+<section class="fx-block" id="allied" style="--fc:#4b8fe0;">
+  <div class="container" style="max-width:820px;">
+    <div class="fx-head reveal">
+      <svg class="fx-icon-lg" viewBox="0 0 48 48" fill="none" stroke="#4b8fe0" stroke-width="2"><path d="M24 4 L42 12 V24 C42 34 34 42 24 44 C14 42 6 34 6 24 V12 Z"/><path d="M24 12 L24 36 M16 20 L32 20"/></svg>
+      <div>
+        <span class="fx-tag" style="color:#4b8fe0;">Faction One</span>
+        <h2 class="mt-0">Allied Nations</h2>
+      </div>
+    </div>
+    <p class="reveal">The coalition that won the last war is fighting to prove the win still counts. Allied doctrine leans on speed, precision, and directed-energy weapons that punish anyone who commits their forces carelessly — a style built for commanders who'd rather outmaneuver an enemy than outlast them.</p>
+    <p class="reveal">In New War, the Allies field a rebuilt naval and air arsenal alongside veteran ground units, with new prototype technology developed in response to threats the original war never had to plan for.</p>
+    <div class="fx-stats reveal">
+      <div class="fx-stat"><span class="k">Doctrine</span><span class="v">Precision &amp; mobility</span></div>
+      <div class="fx-stat"><span class="k">Strength</span><span class="v">Air &amp; naval superiority</span></div>
+      <div class="fx-stat"><span class="k">Signature tech</span><span class="v">Directed-energy weapons</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="fx-block" id="soviet" style="--fc:#d8404a;">
+  <div class="container" style="max-width:820px;">
+    <div class="fx-head reveal">
+      <svg class="fx-icon-lg" viewBox="0 0 48 48" fill="none" stroke="#d8404a" stroke-width="2"><circle cx="24" cy="24" r="19"/><path d="M24 9 L24 19 M24 29 L24 39 M9 24 L19 24 M29 24 L39 24"/></svg>
+      <div>
+        <span class="fx-tag" style="color:#d8404a;">Faction Two</span>
+        <h2 class="mt-0">Soviet Union</h2>
+      </div>
+    </div>
+    <p class="reveal">The Union never fully stood down, and in New War that suspicion is vindicated. Soviet forces trade finesse for mass — heavier armor, harder-hitting artillery, and a production doctrine built on simply outbuilding whoever's in front of them.</p>
+    <p class="reveal">A new generation of armored vehicles and siege weapons fills out the roster, alongside veterans of the original war whose loyalty to the flag never wavered even as the timeline around them did.</p>
+    <div class="fx-stats reveal">
+      <div class="fx-stat"><span class="k">Doctrine</span><span class="v">Mass &amp; attrition</span></div>
+      <div class="fx-stat"><span class="k">Strength</span><span class="v">Heavy armor &amp; artillery</span></div>
+      <div class="fx-stat"><span class="k">Signature tech</span><span class="v">Overwhelming firepower</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="fx-block" id="epsilon" style="--fc:#c23fd4;">
+  <div class="container" style="max-width:820px;">
+    <div class="fx-head reveal">
+      <svg class="fx-icon-lg" viewBox="0 0 48 48" fill="none" stroke="#c23fd4" stroke-width="2"><ellipse cx="24" cy="24" rx="19" ry="11"/><circle cx="24" cy="24" r="5"/></svg>
+      <div>
+        <span class="fx-tag" style="color:#c23fd4;">Faction Three</span>
+        <h2 class="mt-0">Epsilon Headquarters</h2>
+      </div>
+    </div>
+    <p class="reveal">What remains of Yuri's command structure never disbanded — it went quiet. Epsilon Headquarters operates from the shadows of the fracture itself, rebuilding a psychic arsenal around a leader no field commander has confirmed seeing since the extraction.</p>
+    <p class="reveal">Mind control, battlefield manipulation, and unconventional infantry remain Epsilon's calling card, now paired with new constructs pulled from the same instability that let Yuri escape in the first place.</p>
+    <div class="fx-stats reveal">
+      <div class="fx-stat"><span class="k">Doctrine</span><span class="v">Control &amp; subversion</span></div>
+      <div class="fx-stat"><span class="k">Strength</span><span class="v">Psychic warfare</span></div>
+      <div class="fx-stat"><span class="k">Signature tech</span><span class="v">Mind control &amp; manipulation</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="fx-block" id="continuum" style="--fc:#2fbfa8; border-bottom:none;">
+  <div class="container" style="max-width:820px;">
+    <div class="fx-head reveal">
+      <svg class="fx-icon-lg" viewBox="0 0 48 48" fill="none" stroke="#2fbfa8" stroke-width="2"><circle cx="24" cy="24" r="18"/><path d="M13 24 C13 17 20 17 24 24 C28 31 35 31 35 24 C35 17 28 17 24 24 C20 31 13 31 13 24 Z"/></svg>
+      <div>
+        <span class="fx-tag" style="color:#2fbfa8;">Faction Four</span>
+        <h2 class="mt-0">The Continuum</h2>
+      </div>
+    </div>
+    <p class="reveal">No flag, no prior record, no explanation the other three powers can agree on. The Continuum arrived fully formed the moment the timeline fractured, wielding technology field analysts date to several decades in the future — if it can be dated at all.</p>
+    <p class="reveal">Its forces bend the battlefield itself: units that phase in and out of engagements, structures that reposition without warning, and a doctrine that treats time as just another terrain feature to exploit.</p>
+    <div class="fx-stats reveal">
+      <div class="fx-stat"><span class="k">Doctrine</span><span class="v">Disruption &amp; displacement</span></div>
+      <div class="fx-stat"><span class="k">Strength</span><span class="v">Unpredictability</span></div>
+      <div class="fx-stat"><span class="k">Signature tech</span><span class="v">Chronal &amp; phase technology</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="panel-bg">
+  <div class="container text-center" style="max-width:600px;">
+    <span class="section-tag">Ready to command?</span>
+    <h2>Pick a side. Or don't.</h2>
+    <p>All four factions are playable across campaign, co-op, and skirmish from launch.</p>
+    <a href="download.html" class="btn btn-primary">Download New War</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; 2026 New War Modding Team. Fan-made, non-commercial.</span>
+      <span>Command &amp; Conquer: Red Alert 2 is a trademark of Electronic Arts Inc.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
