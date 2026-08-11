@@ -65,14 +65,14 @@
 </footer>
 <script>
 const UNITS=[
-{id:'phase_trooper',name:'Phase Trooper',role:'Standard Infantry',abbr:'Ph.Tpr',icon:'icons/bf_phase_trooper.png',prereq:'BF Barracks',cost:'$300',primary:'Phase Rifle (Special)',armor:'Medium',speed:'7',sight:'5',range:'5',special:'Brief Phase-Out After Firing',desc:'Black Force standard infantry. Fires a phase rifle that destabilizes target matter on impact. Briefly phases out after each shot, becoming momentarily immune to return fire.'},
-{id:'temporal_scout',name:'Temporal Scout',role:'Scout / Recon',abbr:'Scout',icon:'icons/bf_temporal_scout.png',prereq:'BF Barracks',cost:'$200',primary:'Temporal Pistol (Special)',armor:'Light',speed:'11',sight:'9',range:'3',special:'Passive Radar Stealth',desc:'Fast recon infantry permanently invisible to enemy radar. Marks enemy positions and relays targeting data to Black Force artillery. Cannot sustain combat.'},
-{id:'engineer',name:'Engineer',role:'Capture &amp; Repair',abbr:'Engr',icon:'icons/bf_engineer.png',prereq:'BF Barracks',cost:'$500',primary:'Unarmed',armor:'None',speed:'5',sight:'5',range:'—',special:'Capture / Repair Structures',desc:'Captures and repairs structures. Like all engineers, completely unarmed and entirely dependent on escort.'},
-{id:'temporal_shield',name:'Temporal Shield',role:'Support Defender',abbr:'T.Shld',icon:'icons/bf_temporal_shield.png',prereq:'BF Barracks',cost:'$600',primary:'Unarmed',armor:'Heavy',speed:'4',sight:'5',range:'—',special:'Temporal Bubble — Friendly Units',desc:'Projects a temporal bubble around nearby friendly units making them briefly invulnerable. Cannot attack. Deployed behind frontline units to absorb a first strike.'},
-{id:'shift_agent',name:'Shift Agent',role:'Infiltration / Sabotage',abbr:'Shift',icon:'icons/bf_shift_agent.png',prereq:'BF Barracks',cost:'$1,200',primary:'Temporal Blade (Special)',armor:'Light',speed:'8',sight:'7',range:'1',special:'Short-Range Teleport',desc:'Can teleport short distances to bypass walls and defenses entirely. Kills infantry instantly on contact with the temporal blade.'},
-{id:'void_commando',name:'Void Commando',role:'Elite Operative',abbr:'Void',icon:'icons/bf_void_commando.png',prereq:'Battle Core',cost:'$1,800',primary:'Void Cannon / Temporal C4 (Special)',armor:'Medium',speed:'8',sight:'8',range:'7',special:'Void Phase + Demolitions',desc:'Enters the void between timelines to become untargetable, then re-emerges behind defenses. Plants temporal charges that collapse target structures into fractured space.'},
-{id:'rift_walker',name:'Rift Walker',role:'Heavy Assault',abbr:'R.Walk',icon:'icons/bf_rift_walker.png',prereq:'Battle Core',cost:'$1,000',primary:'Rift Pulse Cannon (Special)',armor:'Heavy',speed:'6',sight:'6',range:'6',special:'Periodic Phase Armor',desc:'Heavy infantry in phase-reinforced armor. Periodically phases out body segments — incoming projectiles pass harmlessly through. Devastating in sustained firefights.'},
-{id:'paradox_soldier',name:'Paradox Soldier',role:'Elite Infantry',abbr:'Prdx',icon:'icons/bf_paradox_soldier.png',prereq:'Battle Core',cost:'$2,000',primary:'Paradox Rifle (Special)',armor:'Heavy',speed:'6',sight:'7',range:'7',special:'Duplicates on Death',desc:'When killed, briefly creates a paradox duplicate that continues fighting before dissolving. Enemy commanders face the unsettling experience of killing the same soldier twice.'},
+{id:'phase_trooper',name:'Phase Trooper',role:'Standard Infantry',abbr:'Ph.Tpr',icon:'icons/bf_phase_trooper.png',prereq:'BF Barracks',cost:'$300',primary:'Phase Rifle (Special)',strength:'150',armor:'Medium',speed:'7',sight:'5',range:'5',special:'Brief Phase-Out After Firing',desc:'Black Force standard infantry. Fires a phase rifle that destabilizes target matter on impact. Briefly phases out after each shot, becoming momentarily immune to return fire.'},
+{id:'temporal_scout',name:'Temporal Scout',role:'Scout / Recon',abbr:'Scout',icon:'icons/bf_temporal_scout.png',prereq:'BF Barracks',cost:'$200',primary:'Temporal Pistol (Special)',strength:'75',armor:'Light',speed:'11',sight:'9',range:'3',special:'Passive Radar Stealth',desc:'Fast recon infantry permanently invisible to enemy radar. Marks enemy positions and relays targeting data to Black Force artillery. Cannot sustain combat.'},
+{id:'engineer',name:'Engineer',role:'Capture &amp; Repair',abbr:'Engr',icon:'icons/bf_engineer.png',prereq:'BF Barracks',cost:'$500',primary:'Unarmed',strength:'75',armor:'None',speed:'5',sight:'5',range:'—',special:'Capture / Repair Structures',desc:'Captures and repairs structures. Like all engineers, completely unarmed and entirely dependent on escort.'},
+{id:'temporal_shield',name:'Temporal Shield',role:'Support Defender',abbr:'T.Shld',icon:'icons/bf_temporal_shield.png',prereq:'BF Barracks',cost:'$600',primary:'Unarmed',strength:'200',armor:'Heavy',speed:'4',sight:'5',range:'—',special:'Temporal Bubble — Friendly Units',desc:'Projects a temporal bubble around nearby friendly units making them briefly invulnerable. Cannot attack. Deployed behind frontline units to absorb a first strike.'},
+{id:'shift_agent',name:'Shift Agent',role:'Infiltration / Sabotage',abbr:'Shift',icon:'icons/bf_shift_agent.png',prereq:'BF Barracks',cost:'$1,200',primary:'Temporal Blade (Special)',strength:'100',armor:'Light',speed:'8',sight:'7',range:'1',special:'Short-Range Teleport',desc:'Can teleport short distances to bypass walls and defenses entirely. Kills infantry instantly on contact with the temporal blade.'},
+{id:'void_commando',name:'Void Commando',role:'Elite Operative',abbr:'Void',icon:'icons/bf_void_commando.png',prereq:'Battle Core',cost:'$1,800',primary:'Void Cannon / Temporal C4 (Special)',strength:'175',armor:'Medium',speed:'8',sight:'8',range:'7',special:'Void Phase + Demolitions',desc:'Enters the void between timelines to become untargetable, then re-emerges behind defenses. Plants temporal charges that collapse target structures into fractured space.'},
+{id:'rift_walker',name:'Rift Walker',role:'Heavy Assault',abbr:'R.Walk',icon:'icons/bf_rift_walker.png',prereq:'Battle Core',cost:'$1,000',primary:'Rift Pulse Cannon (Special)',strength:'250',armor:'Heavy',speed:'6',sight:'6',range:'6',special:'Periodic Phase Armor',desc:'Heavy infantry in phase-reinforced armor. Periodically phases out body segments — incoming projectiles pass harmlessly through. Devastating in sustained firefights.'},
+{id:'paradox_soldier',name:'Paradox Soldier',role:'Elite Infantry',abbr:'Prdx',icon:'icons/bf_paradox_soldier.png',prereq:'Battle Core',cost:'$2,000',primary:'Paradox Rifle (Special)',strength:'250',armor:'Heavy',speed:'6',sight:'7',range:'7',special:'Duplicates on Death',desc:'When killed, briefly creates a paradox duplicate that continues fighting before dissolving. Enemy commanders face the unsettling experience of killing the same soldier twice.'},
 ];
 </script>
 <script src="script.js"></script>
@@ -88,7 +88,7 @@ const dPrev = document.getElementById('d-preview');
 
 const STAT_FIELDS = [
   ['Prerequisite','prereq'],['Cost','cost'],['Primary','primary'],
-  ['Secondary','secondary'],['Armor Type','armor'],['Speed','speed'],
+  ['Secondary','secondary'],['Strength','strength'],['Armor Type','armor'],['Speed','speed'],
   ['Sight','sight'],['Range','range'],['Special','special']
 ];
 
@@ -134,3 +134,5 @@ const first=document.querySelector('[data-uid]');
 if(first){first.classList.add('active');showUnit(first.dataset.uid);}
 </script>
 </body></html>
+
+
