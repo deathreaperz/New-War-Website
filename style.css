@@ -586,3 +586,80 @@ button.unit-entry.active .unit-name{ color:var(--paper); }
   .unit-stats-table .stat-k{ width:100px; font-size:.6rem; padding:7px 10px; }
   .unit-stats-table .stat-v{ padding:7px 10px; }
 }
+
+/* ============================================================
+   RESPONSIVE — TABLET (≤ 860px)
+   ============================================================ */
+@media(max-width:860px){
+  /* tighten global section spacing */
+  section{ padding: 60px 0; }
+  .fx-block{ padding: 56px 0; }
+
+  /* hero */
+  .hero{ padding: 72px 0 60px; }
+
+  /* page hero */
+  .page-hero{ padding: 52px 0 40px; }
+
+  /* subnav: allow horizontal scroll so tabs never wrap */
+  .subnav .container{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .subnav .container::-webkit-scrollbar{ display:none; }
+
+  /* dossier stamp: shift so it doesn't overlap the heading */
+  .dossier .stamp{ position:static; transform:none; display:inline-block; margin-bottom:14px; }
+
+  /* footer */
+  .footer-grid{ flex-direction:column; gap:28px; }
+  .footer-bottom{ flex-direction:column; gap:8px; }
+}
+
+/* ============================================================
+   RESPONSIVE — PHONE (≤ 480px)
+   ============================================================ */
+@media(max-width:480px){
+  /* container breathing room */
+  .container, .hero-inner{ padding-left:18px; padding-right:18px; }
+
+  /* section + block spacing */
+  section{ padding: 44px 0; }
+  .fx-block{ padding: 40px 0; }
+  .section-head{ margin-bottom:36px; }
+
+  /* hero */
+  .hero{ padding: 54px 0 44px; }
+  .hero-sub{ font-size:1rem; }
+  .hero-actions{ flex-direction:column; gap:12px; }
+  .hero-actions .btn{ width:100%; justify-content:center; }
+
+  /* page hero */
+  .page-hero{ padding: 38px 0 28px; }
+
+  /* dossier */
+  .dossier{ padding: 22px 18px; }
+
+  /* cards */
+  .card{ padding: 20px 18px; }
+
+  /* faction detail stats */
+  .fx-stats{ gap:14px; }
+  .fx-stat{ min-width:0; flex:1 1 calc(50% - 7px); }
+
+  /* nav height reference used by subnav sticky */
+  .subnav{ top: 61px; }
+
+  /* roster unit names: allow slight wrapping instead of truncation */
+  .unit-name{ width:54px; white-space:normal; }
+  .unit-icon-box{ width:54px; height:42px; }
+  .unit-entry{ max-width:54px; }
+}
+
+/* ============================================================
+   iOS SAFARI — fix background-attachment:fixed performance
+   ============================================================ */
+@supports (-webkit-touch-callout: none){
+  body{ background-attachment: scroll; }
+}
