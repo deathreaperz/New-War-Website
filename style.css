@@ -234,6 +234,15 @@ section{ padding: 90px 0; position:relative; }
 
 .panel-bg{ background: var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
 
+/* spotify embed */
+.spotify-embed{
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  max-width: 860px;
+}
+.spotify-embed iframe{ display:block; }
+
 /* dossier / briefing block */
 .dossier{
   background: var(--panel-2);
