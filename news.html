@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News — Yuri's Revenge: New War</title>
+<meta name="description" content="Latest updates, patch notes, and dispatches from the New War modding team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .news-filters{
+    display:flex; gap:10px; flex-wrap:wrap; margin-bottom:44px;
+  }
+  .filter-btn{
+    font-family: var(--font-mono); font-size:.7rem; letter-spacing:.14em;
+    text-transform:uppercase; padding:7px 16px;
+    border:1px solid var(--line); border-radius:2px;
+    background:none; color:var(--steel); cursor:pointer;
+    transition: border-color .2s, color .2s, background .2s;
+  }
+  .filter-btn:hover{ border-color:var(--rift-violet); color:var(--paper); }
+  .filter-btn.active{ border-color:var(--rift-violet); color:var(--rift-violet); background:rgba(139,63,250,.08); }
+
+  .news-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:22px;
+  }
+  @media(max-width:720px){ .news-grid{ grid-template-columns:1fr; } }
+
+  .news-card{
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-top:3px solid var(--rift-violet);
+    padding:28px 26px;
+    display:flex; flex-direction:column; gap:12px;
+    transition:border-color .25s, transform .25s;
+    text-decoration:none;
+  }
+  .news-card:hover{ transform:translateY(-4px); border-color:var(--rift-violet-dim); }
+  .news-card-meta{
+    display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+  }
+  .news-tag{
+    font-family:var(--font-mono); font-size:.65rem; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--rift-violet);
+    border:1px solid var(--rift-violet-dim); padding:3px 9px; border-radius:2px;
+  }
+  .news-tag[data-tag="Patch Notes"]{ color:var(--rift-cyan); border-color:rgba(51,224,201,.4); }
+  .news-tag[data-tag="Lore"]{ color:var(--signal-amber); border-color:rgba(232,162,58,.4); }
+  .news-tag[data-tag="Update"]{ color:var(--allied-blue); border-color:rgba(75,143,224,.4); }
+  .news-date{
+    font-family:var(--font-mono); font-size:.68rem; letter-spacing:.08em;
+    color:var(--steel-dim);
+  }
+  .news-card h3{ font-size:1.2rem; color:var(--paper); margin:0; }
+  .news-card p{ font-size:.93rem; color:var(--steel); margin:0; flex-grow:1; }
+  .news-more{
+    font-family:var(--font-display); font-size:.82rem; font-weight:700;
+    letter-spacing:.06em; text-transform:uppercase;
+    color:var(--rift-violet); margin-top:4px;
+  }
+  .news-card[data-tag="Patch Notes"] .news-more{ color:var(--rift-cyan); }
+  .news-card[data-tag="Lore"] .news-more{ color:var(--signal-amber); }
+  .news-card[data-tag="Update"] .news-more{ color:var(--allied-blue); }
+  .news-card[data-tag="Patch Notes"]{ border-top-color:var(--rift-cyan); }
+  .news-card[data-tag="Lore"]{ border-top-color:var(--signal-amber); }
+  .news-card[data-tag="Update"]{ border-top-color:var(--allied-blue); }
+
+  .news-empty{
+    grid-column:1/-1;
+    font-family:var(--font-mono); font-size:.85rem; letter-spacing:.1em;
+    color:var(--steel-dim); text-transform:uppercase; padding:60px 0;
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="b1">NEW WAR</span>
+      <span class="b2">YURI'S REVENGE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Story</a></li>
+      <li><a href="news.html" class="active">News</a></li>
+      <li><a href="factions.html">Factions</a></li>
+      <li><a href="download.html">Download</a></li>
+      <li><a href="credits.html">Credits</a></li>
+      <li><a href="soundtrack.html">Soundtrack</a></li>
+    </ul>
+    <a href="download.html" class="nav-cta">Get the Mod</a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Comms &middot; Dispatches</span>
+    <h1>Dispatches from the front</h1>
+    <p>Patch notes, lore drops, updates, and everything else from the New War modding team.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="news-filters" id="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Patch Notes">Patch Notes</button>
+      <button class="filter-btn" data-filter="Update">Update</button>
+      <button class="filter-btn" data-filter="Lore">Lore</button>
+      <button class="filter-btn" data-filter="Announcement">Announcement</button>
+    </div>
+    <div class="news-grid" id="news-grid">
+      <p class="news-empty" style="grid-column:1/-1">Loading dispatches…</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>NEW WAR</h4>
+        <p class="small" style="max-width:260px;">An unofficial expansion for Command &amp; Conquer: Red Alert 2 — Yuri's Revenge. Not affiliated with or endorsed by Electronic Arts.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="story.html">Story</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="factions.html">Factions</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="credits.html">Credits</a></li>
+          <li><a href="soundtrack.html">Soundtrack</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Codex</h4>
+        <ul>
+          <li><a href="stolen_tech.html">Stolen Tech Units</a></li>
+          <li><a href="neutral_structures.html">Neutral Structures</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="https://discord.com/invite/MtTSG6c" target="_blank" rel="noopener">Discord</a></li>
+          <li><a href="https://www.moddb.com/mods/yuris-revenge-new-war/" target="_blank" rel="noopener">ModDB</a></li>
+          <li><a href="https://tinyurl.com/YRNWBugtracker" target="_blank" rel="noopener">Report a Bug</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 New War Modding Team. Fan-made, non-commercial.</span>
+      <span>Command &amp; Conquer: Red Alert 2 is a trademark of Electronic Arts Inc.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="news-data.js"></script>
+<script>
+(function(){
+  const grid = document.getElementById('news-grid');
+  const filterBar = document.getElementById('filters');
+  let articles = [];
+  let activeFilter = 'all';
+
+  function fmtDate(iso){
+    const d = new Date(iso + 'T00:00:00');
+    return d.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+  }
+
+  function render(){
+    const visible = activeFilter === 'all'
+      ? articles
+      : articles.filter(a => a.tag === activeFilter);
+
+    if(!visible.length){
+      grid.innerHTML = '<p class="news-empty">No dispatches found.</p>';
+      return;
+    }
+
+    grid.innerHTML = visible.map(a => `
+      <a class="news-card reveal" href="article.html?id=${encodeURIComponent(a.id)}" data-tag="${a.tag}">
+        <div class="news-card-meta">
+          <span class="news-tag" data-tag="${a.tag}">${a.tag}</span>
+          <span class="news-date">${fmtDate(a.date)}</span>
+        </div>
+        <h3>${a.title}</h3>
+        <p>${a.summary}</p>
+        <span class="news-more">Read dispatch &rarr;</span>
+      </a>
+    `).join('');
+
+    /* re-trigger reveal animation for newly rendered cards */
+    if(document.documentElement.classList.contains('js')){
+      requestAnimationFrame(() => {
+        grid.querySelectorAll('.reveal').forEach(el => {
+          el.classList.remove('in');
+          requestAnimationFrame(() => el.classList.add('in'));
+        });
+      });
+    }
+  }
+
+  filterBar.addEventListener('click', e => {
+    const btn = e.target.closest('.filter-btn');
+    if(!btn) return;
+    filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    render();
+  });
+
+  /* newest first */
+  articles = NEWS_DATA.slice().sort((a,b) => new Date(b.date) - new Date(a.date));
+  render();
+})();
+</script>
+<script src="script.js"></script>
+</body>
+</html>

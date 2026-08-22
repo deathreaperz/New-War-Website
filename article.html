@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading… — Yuri's Revenge: New War</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .article-wrap{
+    max-width: 760px;
+  }
+  .article-meta-bar{
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+    margin-bottom:36px;
+    padding-bottom:20px;
+    border-bottom:1px solid var(--line);
+  }
+  .article-tag{
+    font-family:var(--font-mono); font-size:.68rem; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--rift-violet);
+    border:1px solid var(--rift-violet-dim); padding:4px 11px; border-radius:2px;
+  }
+  .article-tag[data-tag="Patch Notes"]{ color:var(--rift-cyan); border-color:rgba(51,224,201,.4); }
+  .article-tag[data-tag="Lore"]{ color:var(--signal-amber); border-color:rgba(232,162,58,.4); }
+  .article-tag[data-tag="Update"]{ color:var(--allied-blue); border-color:rgba(75,143,224,.4); }
+  .article-date{
+    font-family:var(--font-mono); font-size:.72rem; letter-spacing:.1em;
+    color:var(--steel-dim);
+  }
+
+  .article-body{ line-height:1.8; }
+  .article-body p{ font-size:1.02rem; color:var(--steel); margin-bottom:1.2em; }
+  .article-body h3{
+    font-size:1.15rem; color:var(--paper);
+    margin: 2em 0 .6em;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--line);
+  }
+  .article-body ul{
+    margin:0 0 1.2em; padding-left:1.4em;
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .article-body li{ font-size:1rem; color:var(--steel); }
+  .article-body li::marker{ color:var(--rift-violet); }
+
+  .article-img{
+    margin: 1.6em 0;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .article-img img{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .article-note{
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-left:3px solid var(--signal-amber);
+    padding:16px 20px;
+    margin:1.6em 0;
+    font-size:.95rem; color:var(--steel);
+    font-style:italic;
+  }
+
+  .back-link{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-mono); font-size:.72rem; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--steel);
+    margin-bottom:40px;
+    transition:color .2s;
+  }
+  .back-link:hover{ color:var(--rift-cyan); }
+
+  .article-not-found{
+    text-align:center; padding:80px 0;
+  }
+  .article-not-found h2{ color:var(--paper); }
+  .article-not-found p{ max-width:400px; margin:0 auto 28px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <span class="b1">NEW WAR</span>
+      <span class="b2">YURI'S REVENGE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Story</a></li>
+      <li><a href="news.html" class="active">News</a></li>
+      <li><a href="factions.html">Factions</a></li>
+      <li><a href="download.html">Download</a></li>
+      <li><a href="credits.html">Credits</a></li>
+      <li><a href="soundtrack.html">Soundtrack</a></li>
+    </ul>
+    <a href="download.html" class="nav-cta">Get the Mod</a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+</header>
+
+<section class="page-hero" id="article-hero">
+  <div class="container">
+    <span class="eyebrow" id="hero-eyebrow">Loading…</span>
+    <h1 id="hero-title">&nbsp;</h1>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="article-wrap">
+      <a href="news.html" class="back-link">&#8592; All dispatches</a>
+      <div id="article-content">
+        <p style="color:var(--steel-dim); font-family:var(--font-mono); font-size:.8rem; letter-spacing:.1em; text-transform:uppercase;">Loading…</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; 2026 New War Modding Team. Fan-made, non-commercial.</span>
+      <span>Command &amp; Conquer: Red Alert 2 is a trademark of Electronic Arts Inc.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="news-data.js"></script>
+<script>
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+
+  function fmtDate(iso){
+    const d = new Date(iso + 'T00:00:00');
+    return d.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+  }
+
+  function renderBody(blocks){
+    return blocks.map(block => {
+      switch(block.type){
+        case 'p':
+          return `<p>${block.text}</p>`;
+        case 'h3':
+          return `<h3>${block.text}</h3>`;
+        case 'ul':
+          return `<ul>${block.items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+        case 'note':
+          return `<div class="article-note">${block.text}</div>`;
+        case 'img':
+          return `<figure class="article-img"><img src="${block.src}" alt="${block.alt || ''}" loading="lazy"></figure>`;
+        case 'separator':
+          return `<hr style="border:none;border-top:1px solid var(--line);margin:2em 0;">`;
+        default:
+          return '';
+      }
+    }).join('\n');
+  }
+
+  function show404(){
+    document.title = 'Dispatch Not Found — Yuri\'s Revenge: New War';
+    document.getElementById('hero-eyebrow').textContent = 'Error';
+    document.getElementById('hero-title').textContent = 'Dispatch not found';
+    document.getElementById('article-content').innerHTML = `
+      <div class="article-not-found">
+        <h2>No record found</h2>
+        <p>This dispatch doesn't exist or may have been removed.</p>
+        <a href="news.html" class="btn btn-ghost">Back to all dispatches</a>
+      </div>`;
+  }
+
+  if(!id){ show404(); return; }
+
+  const article = NEWS_DATA.find(a => a.id === id);
+  if(!article){ show404(); return; }
+
+  document.title = `${article.title} — Yuri's Revenge: New War`;
+  document.getElementById('hero-eyebrow').textContent = `${article.tag} · ${fmtDate(article.date)}`;
+  document.getElementById('hero-title').textContent = article.title;
+
+  document.getElementById('article-content').innerHTML = `
+    <div class="article-meta-bar">
+      <span class="article-tag" data-tag="${article.tag}">${article.tag}</span>
+      <span class="article-date">${fmtDate(article.date)}</span>
+    </div>
+    <div class="article-body">${renderBody(article.body)}</div>
+  `;
+})();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
