@@ -115,9 +115,14 @@ a:focus-visible, button:focus-visible, .btn:focus-visible{
 .nav-cta:hover{ background: transparent; color: var(--rift-violet); }
 .nav-toggle{ display:none; background:none; border:none; color:var(--paper); font-size:1.5rem; cursor:pointer; }
 
+@media (max-width: 1080px){
+  .nav-links{ gap: 18px; }
+  .nav-links a{ font-size: .82rem; }
+}
+
 @media (max-width: 860px){
   .nav-links{
-    position:fixed; top:69px; left:0; right:0; bottom:0;
+    position:fixed; top:69px; left:0; right:0; bottom:0; z-index:99;
     background: var(--void); flex-direction:column; padding: 30px 28px;
     gap: 22px; transform: translateX(100%); transition: transform .3s ease;
   }

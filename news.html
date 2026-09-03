@@ -109,11 +109,11 @@
 <section>
   <div class="container">
     <div class="news-filters" id="filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="Patch Notes">Patch Notes</button>
-      <button class="filter-btn" data-filter="Update">Update</button>
-      <button class="filter-btn" data-filter="Lore">Lore</button>
-      <button class="filter-btn" data-filter="Announcement">Announcement</button>
+      <button type="button" class="filter-btn active" data-filter="all">All</button>
+      <button type="button" class="filter-btn" data-filter="Patch Notes">Patch Notes</button>
+      <button type="button" class="filter-btn" data-filter="Update">Update</button>
+      <button type="button" class="filter-btn" data-filter="Lore">Lore</button>
+      <button type="button" class="filter-btn" data-filter="Announcement">Announcement</button>
     </div>
     <div class="news-grid" id="news-grid">
       <p class="news-empty" style="grid-column:1/-1">Loading dispatches…</p>
@@ -163,6 +163,7 @@
   </div>
 </footer>
 
+<script src="script.js"></script>
 <script src="news-data.js"></script>
 <script>
 (function(){
@@ -187,7 +188,7 @@
     }
 
     grid.innerHTML = visible.map(a => `
-      <a class="news-card reveal" href="article.html?id=${encodeURIComponent(a.id)}" data-tag="${a.tag}">
+      <a class="news-card" href="article.html?id=${encodeURIComponent(a.id)}" data-tag="${a.tag}">
         <div class="news-card-meta">
           <span class="news-tag" data-tag="${a.tag}">${a.tag}</span>
           <span class="news-date">${fmtDate(a.date)}</span>
@@ -197,16 +198,6 @@
         <span class="news-more">Read dispatch &rarr;</span>
       </a>
     `).join('');
-
-    /* re-trigger reveal animation for newly rendered cards */
-    if(document.documentElement.classList.contains('js')){
-      requestAnimationFrame(() => {
-        grid.querySelectorAll('.reveal').forEach(el => {
-          el.classList.remove('in');
-          requestAnimationFrame(() => el.classList.add('in'));
-        });
-      });
-    }
   }
 
   filterBar.addEventListener('click', e => {
