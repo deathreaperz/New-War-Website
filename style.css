@@ -295,7 +295,7 @@ section{ padding: 90px 0; position:relative; }
   background: var(--panel-2); border:1px solid var(--line); border-top: 3px solid var(--fc, var(--rift-violet));
   padding: 26px; display:flex; flex-direction:column; gap:12px; height:100%;
 }
-.faction-card .fx-icon{ width:46px; height:46px; color: var(--fc, var(--rift-violet)); }
+.faction-card .fx-icon{ width:46px; height:46px; color: var(--fc, var(--rift-violet)); object-fit:contain; }
 .faction-card h3{ color:var(--paper); font-size:1.2rem; }
 .faction-card .fx-tag{ font-family:var(--font-mono); font-size:.72rem; letter-spacing:.15em; color: var(--fc, var(--rift-violet)); text-transform:uppercase; }
 .faction-card p{ font-size:.92rem; flex-grow:1; }
@@ -379,7 +379,7 @@ html.js .reveal.in{ opacity:1; transform:none; }
 
 .fx-block{ padding: 80px 0; border-bottom: 1px solid var(--line); }
 .fx-head{ display:flex; align-items:flex-start; gap:22px; margin-bottom:28px; }
-.fx-icon-lg{ width:56px; height:56px; flex-shrink:0; }
+.fx-icon-lg{ width:56px; height:56px; flex-shrink:0; object-fit:contain; }
 .fx-tag{
   font-family: var(--font-mono); font-size:.72rem; letter-spacing:.16em;
   text-transform:uppercase; display:block; margin-bottom:6px;
