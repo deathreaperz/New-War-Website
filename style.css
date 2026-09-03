@@ -677,3 +677,126 @@ button.unit-entry.active .unit-name{ color:var(--paper); }
 @supports (-webkit-touch-callout: none){
   body{ background-attachment: scroll; }
 }
+
+/* ============================================================
+   CLASSIC COMMAND CENTER THEME
+   ============================================================ */
+:root{
+  --void:#050505;
+  --panel:#161616;
+  --panel-2:#241010;
+  --line:#5b5b5b;
+  --paper:#f3f3f3;
+  --steel:#d7d7d7;
+  --steel-dim:#9d9d9d;
+  --rift-violet:#d00000;
+  --rift-violet-dim:#791010;
+  --rift-cyan:#f04444;
+  --signal-amber:#f1bf24;
+  --font-display:Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  --font-body:"Trebuchet MS", Arial, sans-serif;
+  --font-mono:"Courier New", monospace;
+  --container:960px;
+}
+
+body{
+  background-color:#080808;
+  background-image:repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 4px);
+  font-size:13px;
+  line-height:1.25;
+}
+.site-header{
+  width:calc(100% - 8px); max-width:960px; margin:4px auto 0;
+  position:relative; background:linear-gradient(#171717,#080808);
+  border:1px solid #777; border-bottom:2px solid #a40000;
+  backdrop-filter:none;
+}
+.nav{ min-height:45px; padding:0 8px; max-width:none; }
+.brand{ min-width:145px; padding:4px 12px 3px 0; }
+.brand .b1{ color:#f5dd18; font-size:1.55rem; line-height:.82; text-shadow:2px 2px #a40000; }
+.brand .b2{ color:#e52a1e; font-size:.61rem; letter-spacing:.18em; margin-top:3px; }
+.nav-links{ gap:0; height:45px; }
+.nav-links li{ display:flex; }
+.nav-links a{ display:flex; align-items:center; padding:0 15px; border-left:1px solid #303030; color:#eee; font-size:.72rem; letter-spacing:0; }
+.nav-links a:hover,.nav-links a.active{ color:#fff; background:#691010; }
+.nav-links a.active::after{ height:2px; bottom:0; background:#efefef; }
+.nav-cta{ display:none; }
+.nav-toggle{ font-size:1.3rem; }
+.ticker{ display:none; }
+.container,.hero-inner{ max-width:960px; padding-left:18px; padding-right:18px; }
+section{ padding:34px 0; }
+.hero{
+  width:calc(100% - 8px); max-width:960px; min-height:495px; margin:0 auto;
+  padding:0; border:1px solid #686868;
+  background-image:linear-gradient(to bottom,rgba(0,0,0,.05) 35%,rgba(40,0,0,.9) 100%),url("previews/soviet/soviet_conscript.gif");
+  background-position:center; background-size:cover;
+}
+.hero::before{ background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:44px 44px; mask-image:linear-gradient(to bottom,#000,transparent 90%); }
+.hero::after{
+  content:"MAIN\A SYNOPSIS\A MOD FEATURES\A FACTIONS\A NEWS\A FOOTER";
+  white-space:pre; position:absolute; top:164px; right:8px; z-index:2;
+  color:#fff; text-align:right; line-height:3.05; font:700 12px Arial,sans-serif;
+  text-shadow:1px 1px #000; border-right:2px solid #c40000; padding-right:8px;
+}
+.hero-inner{ padding-top:96px; padding-left:58px; padding-right:150px; }
+.eyebrow,.section-tag{ color:#e33131; font:700 11px var(--font-mono); letter-spacing:.12em; }
+.eyebrow::before{ background:#e33131; box-shadow:none; }
+.glitch-title{ font-size:clamp(3rem,8vw,6rem); color:#f1cf1d; text-shadow:3px 3px #970000, -1px -1px #fff; line-height:.9; margin-bottom:28px; }
+.glitch-title .layer::before,.glitch-title .layer::after{ display:none; }
+.hero-sub{ max-width:600px; color:#fff; font-size:15px; text-align:center; margin:0 auto 22px; text-shadow:1px 1px #000; }
+.hero-actions{ justify-content:center; }
+.btn{ border-radius:0; padding:10px 18px; font-size:.8rem; border:1px solid #888; box-shadow:inset 0 0 0 1px #1a1a1a; }
+.btn-primary{ background:linear-gradient(#b50d0d,#4a0505); border-color:#e32929; }
+.btn-primary:hover{ background:#d31b1b; }
+.btn-ghost{ background:#171717; color:#fff; border-color:#777; }
+.btn-ghost:hover{ border-color:#d33; color:#fff; }
+.rift{ display:none; }
+.panel-bg,section{ background-color:#080808; border-color:#444; }
+.panel-bg{ background-image:repeating-linear-gradient(0deg,rgba(150,0,0,.12) 0 1px,transparent 1px 4px); }
+.section-head{ max-width:640px; margin:0 auto 28px; text-align:center; }
+.section-head h2,.page-hero h1{ color:#fff; font-size:2rem; text-shadow:2px 2px #000; }
+.section-head p,p{ color:#eee; }
+.dossier,.card,.faction-card,.codex-card,.unit-card,.news-card{ border-radius:0; border-color:#8d0000; background:rgba(50,4,4,.72); box-shadow:inset 0 0 20px rgba(0,0,0,.65); }
+.dossier{ border-left:3px solid #d00000; padding:26px 30px; background:linear-gradient(90deg,rgba(71,6,6,.9),rgba(25,8,8,.75)); }
+.dossier h3,.card h3,.faction-card h3{ color:#fff; }
+.dossier p{ color:#fff; font-size:14px; }
+.grid{ gap:20px; }
+.grid-4{ grid-template-columns:repeat(4,1fr); }
+.faction-card{ border-top:3px solid var(--fc); padding:18px; }
+.faction-card .fx-icon{ color:var(--fc); }
+.faction-card .fx-tag,.faction-card .fx-more{ color:var(--fc); }
+.card{ min-height:190px; padding:0 16px 15px; display:flex; flex-direction:column; justify-content:flex-end; position:relative; overflow:hidden; }
+.card::before{ content:""; position:absolute; inset:0; background:center/cover no-repeat; opacity:.7; filter:saturate(.9); }
+.card:nth-child(1)::before{ background-image:url("previews/soviet/soviet_conscript.gif"); }
+.card:nth-child(2)::before{ background-image:url("previews/soviet/soviet_flak_trooper.gif"); }
+.card:nth-child(3)::before{ background-image:url("previews/soviet/soviet_crazy_ivan.gif"); }
+.card:nth-child(4)::before{ background-image:url("previews/soviet/soviet_flak_trooper.gif"); background-position:left center; }
+.card:nth-child(5)::before{ background-image:url("previews/soviet/soviet_crazy_ivan.gif"); background-position:right center; }
+.card:nth-child(6)::before{ background-image:url("previews/soviet/soviet_conscript.gif"); background-position:center bottom; }
+.card > *{ position:relative; z-index:1; }
+.card::after{ content:""; position:absolute; inset:42% 0 0; background:linear-gradient(transparent,rgba(70,0,0,.95)); }
+.card .num{ display:none; }
+.card h3{ background:#a90000; text-align:center; margin:0 -4px 7px; padding:4px; font-size:1rem; }
+.card p{ color:#fff; font-size:11px; text-align:center; margin:0; }
+.site-footer{ background:#090909; border-color:#555; padding:28px 0; }
+.footer-col h4{ color:#ddd; }
+.footer-col a,.footer-col p{ color:#aaa; }
+.footer-bottom{ border-color:#444; }
+.page-hero{ padding:42px 0 30px; background:#160404; border-color:#555; }
+.page-hero::before{ background-image:repeating-linear-gradient(0deg,rgba(255,0,0,.08) 0 1px,transparent 1px 4px); background-size:auto; }
+.page-hero h1{ position:relative; }
+.pill{ border-radius:0; color:#fff; border-color:#8d0000; }
+.reveal{ transition-duration:.35s; }
+@media(max-width:860px){
+  .nav-links{ top:47px; background:#090909; height:auto; }
+  .nav-links a{ padding:14px 18px; }
+  .hero-inner{ padding-left:30px; padding-right:110px; }
+  .grid-4{ grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:560px){
+  .hero{ min-height:560px; }
+  .hero-inner{ padding:72px 28px 30px; }
+  .hero::after{ top:auto; bottom:16px; right:8px; line-height:1.7; }
+  .glitch-title{ font-size:3.2rem; }
+  .grid-4,.grid-3{ grid-template-columns:1fr; }
+}
