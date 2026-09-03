@@ -26,7 +26,7 @@
 <section class="page-hero" style="--fc:#4b8fe0;"><div class="container"><div class="fx-head reveal"><img class="fx-icon-lg" src="resources/logo/Allied%20Logo.png" alt="Allied Nations logo"><div><span class="eyebrow" style="color:#4b8fe0;">Faction One &mdash; Allied Nations</span><h1 class="mt-0">Structures</h1></div></div></div></section>
 <div class="subnav" style="--fc:#4b8fe0;"><div class="container"><a href="allied_info.html">Overview</a><a href="allied_infantry.html">Infantry</a><a href="allied_units.html">Units</a><a href="allied_structures.html" class="active">Structures</a></div></div>
 <section style="padding:48px 0 80px;"><div class="container" style="--fc:#4b8fe0;">
-<div class="section-head reveal" style="margin-bottom:28px;"><span class="section-tag" style="color:#4b8fe0;">Order of Battle</span><h2>Allied Nations Structures</h2><p>Select a unit icon to view full stats and tactical notes.</p></div>
+<div class="section-head reveal" style="margin-bottom:28px;"><h2>Allied Nations Structures</h2><p>Select a unit icon to view full stats and tactical notes.</p></div>
 <div class="unit-roster" id="palette">
 <button class="unit-entry" data-uid="gacnst"><div class="unit-icon-box"><img src="resources/icons/allied/aconicon.png" alt="Construction Yard" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>GACNST</div>'"></div><span class="unit-name">Construction Yard</span></button>
 <button class="unit-entry" data-uid="gapowr"><div class="unit-icon-box"><img src="resources/icons/allied/powricon.png" alt="Power Plant" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=unit-icon-placeholder>GAPOWR</div>'"></div><span class="unit-name">Power Plant</span></button>
@@ -102,6 +102,31 @@ const UNITS=[
 {id:'gagap',name:'Allied Gap Generator',role:'Radar Jamming Device',abbr:'GAGAP',icon:'resources/icons/allied/gapicon.png',prereq:'Allied Construction Yard + Battle Lab',cost:'$1,000',primary:'Gap Generator',hitpoint:'600',armor:'Wood',power:'-100 / -200 (deployed)',sight:'5',range:'10 / 15 (deployed)',special:'Deploy to Increase Radius',desc:'The Gap Generator conceals your base by generating a persistent shroud that obscures everything within its coverage area from enemy surveillance. While powered and operational, enemy commanders cannot see structures or units hidden within the shroud, making it ideal for protecting strategic positions and concealing your operations. Its effect is disabled when the structure loses power or is destroyed.'},
 {id:'gagcan',name:'Allied Grand Cannon',role:'Artillery Base Defense',abbr:'GAGCAN',icon:'resources/icons/allied/gcanicon.png',prereq:'Allied Construction Yard + Battle Lab',cost:'$2,000',primary:'Highly Explosive Shell',hitpoint:'900',armor:'Steel',power:'-100',sight:'10',range:'15',special:'—',desc:'The Grand Cannon is a massive long-range artillery defense designed to devastate enemy ground forces from extreme range. Its powerful shells inflict heavy damage over a wide area, making it highly effective against armored formations and large groups of enemy units. However, it cannot engage aircraft or targets at close range and requires protection from other defenses.'},
 ];
+
+const STRUCTURE_PREVIEWS={
+  gacnst:'resources/previews/allied/structures/Allied%20Conyard.png',
+  gapowr:'resources/previews/allied/structures/Allied%20Power%20Plant.png',
+  garefn:'resources/previews/allied/structures/Allied%20Ore%20Refinery.png',
+  gapile:'resources/previews/allied/structures/Allied%20Barracks.png',
+  gaweap:'resources/previews/allied/structures/Allied%20War%20Factory.png',
+  gayard:'resources/previews/allied/structures/Allied%20Shipyard.png',
+  gaairc:'resources/previews/allied/structures/Allied%20Airforce%20Command.png',
+  gadept:'resources/previews/allied/structures/Allied%20Service%20Depot.png',
+  garobo:'resources/previews/allied/structures/Allied%20Robot%20Control%20Center.png',
+  gahpad:'resources/previews/allied/structures/Allied%20Airpad.png',
+  gatech:'resources/previews/allied/structures/Allied%20Battle%20Lab.png',
+  gaorep:'resources/previews/allied/structures/Allied%20Ore%20Purifier.png',
+  gaspysat:'resources/previews/allied/structures/Allied%20Spysat%20Uplink.png',
+  gacsph:'resources/previews/allied/structures/Allied%20Chronosphere.png',
+  gaweat:'resources/previews/allied/structures/Allied%20Weather%20Controller.png',
+  gawall:'resources/previews/allied/structures/Allied%20Walls.png',
+  gapill:'resources/previews/allied/structures/Allied%20Pillbox.png',
+  gagunt:'resources/previews/allied/structures/Allied%20Cannon%20Turret.png',
+  gasam:'resources/previews/allied/structures/Allied%20Patriot%20Missile.png',
+  gapris:'resources/previews/allied/structures/Allied%20Prism%20Tower.png',
+  gagap:'resources/previews/allied/structures/Allied%20Gap%20Generator.png',
+  gagcan:'resources/previews/allied/structures/Allied%20Grand%20Cannon.png'
+};
 </script>
 <script src="script.js"></script>
 <script>
@@ -141,8 +166,9 @@ function showUnit(id){
     /* description */
     dDesc.textContent = u.desc;
     /* preview */
-    if(u.preview){
-      dPrev.innerHTML = `<img src="${u.preview}" alt="${u.name} preview">`;
+    const preview = STRUCTURE_PREVIEWS[u.id];
+    if(preview){
+      dPrev.innerHTML = `<img src="${preview}" alt="${u.name} preview">`;
     } else {
       dPrev.textContent = '// Structure preview — placeholder';
     }
