@@ -139,6 +139,10 @@ document.querySelectorAll('[data-uid]').forEach(btn=>{
 const first=document.querySelector('[data-uid]');
 if(first){first.classList.add('active');showUnit(first.dataset.uid);}
 </script>
+<script>
+showUnit = window.enhanceRosterDetails({units:UNITS,statFields:STAT_FIELDS,showUnit});
+showUnit(first?.dataset.uid);
+</script>
 </body></html>
 
 

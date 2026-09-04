@@ -60,6 +60,14 @@
         </div>
       </div>
       <table class="unit-stats-table" id="d-stats"></table>
+      <div class="unit-detail-extra-section" id="d-special-details" hidden>
+        <span class="detail-section-label">Special Details</span>
+        <ul class="detail-list" id="d-special-list"></ul>
+      </div>
+      <div class="unit-detail-extra-section" id="d-additional-info" hidden>
+        <span class="detail-section-label">Additional Information</span>
+        <ul class="detail-list" id="d-additional-list"></ul>
+      </div>
       <div class="unit-detail-desc-section">
         <p class="unit-detail-desc" id="d-desc"></p>
       </div>
@@ -103,6 +111,74 @@ const UNITS=[
 {id:'gagcan',name:'Allied Grand Cannon',role:'Artillery Base Defense',abbr:'GAGCAN',icon:'resources/icons/allied/gcanicon.png',prereq:'Allied Construction Yard + Battle Lab',cost:'$2,000',primary:'Highly Explosive Shell',hitpoint:'900',armor:'Steel',power:'-100',sight:'10',range:'15',special:'—',desc:'The Grand Cannon is a massive long-range artillery defense designed to devastate enemy ground forces from extreme range. Its powerful shells inflict heavy damage over a wide area, making it highly effective against armored formations and large groups of enemy units. However, it cannot engage aircraft or targets at close range and requires protection from other defenses.'},
 ];
 
+const STRUCTURE_DETAILS={
+  gacnst:{
+    additionalInfo:['Deployed from an Allied Mobile Construction Vehicle.','Automatically repairs itself in mobile form.', 'Can be infiltrated to unlock one-time Stolen Tech super weapon.']
+  },
+  gapowr:{
+    specialDetails:[{name:'Power Turbine Upgrade',icon:'resources/icons/allied/pwtbicon.png',description:'Upgrades the plant to improve its total power generation.',facts:[['Cost','$200'],['Extra Power','+100'],['Extra Prerequisite','Allied Construction Yard']]}],
+	additionalInfo:['Can be infiltrated to shut down owner\'s power for 1:30 minutes.']
+  },
+  garefn:{
+    additionalInfo:['Deploys a free Chrono Miner when built.','Can be infiltrated to steal $4,000 from its owner.']
+  },
+  gapile:{
+    additionalInfo:['Can be infiltrated to acquire veteran infantry training.','Building multiple Barracks will increase the rate of infantry production.']
+  },
+  gaweap:{
+    additionalInfo:['Can be infiltrated to acquire veteran unit production.','Building multiple War Factories will increase the rate of vehicle production.']
+  },
+  gayard:{
+    specialDetails:[{name:'Sonar Pulse',icon:'resources/icons/allied/sonaicon.png',description:'Reveals nearby submerged naval units for 45 seconds.',facts:[['Recharge Time','6 minutes'],['Range','6'],['Requires Power','yes'],['Affect Players','Enemies'],['Extra Prerequisite','Allied Battle Lab']]}],
+    additionalInfo:['Cannot be captured.','Does not expand base building area.','Building multiple Naval Shipyards will increase the rate of ship production.']
+  },
+  gaairc:{
+    additionalInfo:['Can be infiltrated to reshroud its owner\'s map.','Building multiple Airforce Command HQs will increase the rate of jet aircraft production.']
+  },
+  garobo:{
+    additionalInfo:['Controlled robot units shut down when this facility is offline.']
+  },
+  gahpad:{
+    additionalInfo:['Cannot be captured.','Does not expand base building area.']
+  },
+  gatech:{
+    specialDetails:[{name:'Force Shield',icon:'resources/icons/allied/forcicon.png',description:'The Force Shield projects a powerful energy field over a large selected area, rendering allied structures within it completely invulnerable for 25 seconds. However, activating the shield consumes the base\'s entire power supply for 60 seconds, temporarily disabling powered systems. The Force Shield affects structures only and cannot protect units.',facts:[['Recharge Time','7:50 minutes'],['Range','3,4'],['Requires Power','yes'],['Affect Players','Team']]}],
+    additionalInfo:['Can be infiltrated to reset its support powers\' timers.','Can be infiltrated to unlock Stolen Tech units.']
+  },
+  gaorep:{
+    additionalInfo:['Build Limit: 1', 'Cannot be captured.', 'All income from Ore Refineries is increased by 25%.', 'Provides additional income like a single Tech Oil Derrick.', 'Can be infiltrated to reveal the owner\'s current money amount.']
+  },
+  gaspysat:{
+    additionalInfo:['Build Limit: 1', 'Reveals the entire map (except any areas shrouded by Gap Generators) when built.', 'The entire map will be reshrouded if the Spy Satellite is destroyed.','Can be infiltrated to reshroud its owner\'s map.']
+  },
+  gacsph:{
+    specialDetails:[{name:'Chronoshift',icon:'resources/icons/allied/chroicon.png',description:'After charging, teleports selected forces to a target location.',facts:[['Recharge Time','7 minutes'],['Range','3,3'],['Requires Power','yes'],['Affect Players','Team']]}],
+    additionalInfo:['Build Limit: 1', 'Cannot be captured.', 'Can be infiltrated to reset this super weapon\'s timer.']
+  },
+  gaweat:{
+    specialDetails:[{name:'Lightning Storm',icon:'resources/icons/allied/bolticon.png',description:'After charging, creates a destructive storm over the target area and temporarily disrupts radar.',facts:[['Recharge Time','10 minutes'],['Range','9'],['Requires Power','yes'],['Affect Players','All / Enemies (Radar Jammer)']]}],
+    additionalInfo:['Build Limit: 1', 'Cannot be captured.', 'Can be infiltrated to reset this super weapon\'s timer.']
+  },
+  gapill:{
+    additionalInfo:['Can gain experience.']
+  },
+  gagunt:{
+    additionalInfo:['Can gain experience.']
+  },
+  gasam:{
+    additionalInfo:['Can gain experience.']
+  },
+  gapris:{
+    additionalInfo:['Can gain experience.', 'Towers can link with each other for a 50% firepower increase.', 'Towers from the same team can be linked with each other.', 'Up to 3 Towers can be linked at the same time.']
+  },
+  gagap:{
+    additionalInfo:['Deploy to increase the radar-jamming radius that conceals nearby forces and structures.']
+  },
+  gagcan:{
+    additionalInfo:['Can gain experience.', 'Minimum Range: 5']
+  }
+};
+
 const STRUCTURE_PREVIEWS={
   gacnst:'resources/previews/allied/structures/Allied%20Conyard.png',
   gapowr:'resources/previews/allied/structures/Allied%20Power%20Plant.png',
@@ -138,15 +214,20 @@ const dRole = document.getElementById('d-role');
 const dStats= document.getElementById('d-stats');
 const dDesc = document.getElementById('d-desc');
 const dPrev = document.getElementById('d-preview');
+const dSpecialDetails = document.getElementById('d-special-details');
+const dSpecialList = document.getElementById('d-special-list');
+const dAdditionalInfo = document.getElementById('d-additional-info');
+const dAdditionalList = document.getElementById('d-additional-list');
 
 const STAT_FIELDS = [
-  ['Prerequisite','prereq'],['Cost','cost'],['Primary','primary'],
-  ['Secondary','secondary'],['Hitpoint','hitpoint'],['Armor Type','armor'],['Power','power'],
-  ['Sight','sight'],['Range','range'],['Special','special']
+  ['Prerequisite','prereq'],['Cost','cost'],['Hitpoint','hitpoint'],['Armor Type','armor'],
+  ['Sight','sight'],['Power','power'],['Primary','primary'],['Secondary','secondary'],
+  ['Range','range'],['Special','special']
 ];
 
 function showUnit(id){
-  const u = UNITS.find(x=>x.id===id);
+  const unit = UNITS.find(x=>x.id===id);
+  const u = unit ? {...unit,...STRUCTURE_DETAILS[id]} : null;
   if(!u) return;
   card.classList.add('switching');
   setTimeout(()=>{
@@ -163,6 +244,51 @@ function showUnit(id){
       .filter(([,k])=>u[k]&&u[k]!=='—')
       .map(([label,k])=>`<tr><td class="stat-k">${label}</td><td class="stat-v">${u[k]}</td></tr>`)
       .join('');
+    dSpecialDetails.hidden = !u.specialDetails?.length;
+    dSpecialList.replaceChildren(...(u.specialDetails || []).map(detail=>{
+      const item = document.createElement('li');
+      if(typeof detail === 'string'){
+        item.textContent = detail;
+        return item;
+      }
+      if(detail.icon){
+        const icon = document.createElement('img');
+        icon.className = 'detail-icon';
+        icon.src = detail.icon;
+        icon.alt = '';
+        item.append(icon);
+      }
+      const text = document.createElement('span');
+      text.className = 'detail-text';
+      const name = document.createElement('strong');
+      name.textContent = detail.name;
+      const description = document.createElement('span');
+      description.className = 'detail-description';
+      description.textContent = detail.description;
+      text.append(name, description);
+      if(detail.facts?.length){
+        const facts = document.createElement('ul');
+        facts.className = 'detail-facts';
+        detail.facts.forEach(([label, value])=>{
+          const fact = document.createElement('li');
+          fact.className = 'detail-fact';
+          fact.textContent = `${label}: `;
+          const factValue = document.createElement('b');
+          factValue.textContent = value;
+          fact.append(factValue);
+          facts.append(fact);
+        });
+        text.append(facts);
+      }
+      item.append(text);
+      return item;
+    }));
+    dAdditionalInfo.hidden = !u.additionalInfo?.length;
+    dAdditionalList.replaceChildren(...(u.additionalInfo || []).map(info=>{
+      const item = document.createElement('li');
+      item.textContent = info;
+      return item;
+    }));
     /* description */
     dDesc.textContent = u.desc;
     /* preview */

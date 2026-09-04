@@ -22,7 +22,7 @@
 
   --font-display: "Rajdhani", "Arial Narrow", sans-serif;
   --font-body: "IBM Plex Sans", "Segoe UI", sans-serif;
-  --font-mono: "IBM Plex Mono", "Consolas", monospace;
+  --font-mono: "IBM Plex Mono", "Lucida Console", monospace;
 
   --container: 1120px;
 }
@@ -568,6 +568,32 @@ button.unit-entry.active .unit-name{ color:var(--paper); }
   padding:9px 16px; vertical-align:middle;
 }
 
+.unit-detail-extra-section{
+  padding:16px 20px;
+  border-bottom:1px solid var(--line);
+}
+.detail-section-label{
+  font-family:var(--font-mono); font-size:.64rem; letter-spacing:.14em;
+  color:var(--steel-dim); text-transform:uppercase;
+  display:block; margin-bottom:10px;
+}
+.detail-list{ list-style:none; margin:0; padding:0; display:grid; gap:8px; }
+.detail-list li{ display:flex; align-items:flex-start; gap:10px; color:var(--steel); font-size:.9rem; }
+.detail-list li::before{ content:"//"; color:var(--fc, var(--rift-violet)); font-family:var(--font-mono); }
+.detail-icon{
+  width:60px; height:48px; flex-shrink:0;
+  object-fit:contain; image-rendering:pixelated;
+  border:1px solid var(--line); background:var(--void);
+}
+.detail-text{ display:flex; flex-direction:column; gap:2px; }
+.detail-text strong{ color:var(--paper); font-size:.86rem; }
+.detail-text span{ color:var(--steel); font-size:.82rem; }
+.detail-description{ line-height:1.45; }
+.detail-facts{ margin:4px 0 0; padding-left:18px; color:var(--steel); }
+.detail-fact{ display:list-item; font-family:var(--font-mono); font-size:.7rem; line-height:1.5; }
+.detail-fact::marker{ color:var(--fc, var(--rift-violet)); }
+.detail-fact b{ color:var(--paper); font-weight:500; }
+
 /* Description */
 .unit-detail-desc-section{
   padding:16px 20px;
@@ -695,7 +721,7 @@ button.unit-entry.active .unit-name{ color:var(--paper); }
   --signal-amber:#f1bf24;
   --font-display:Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   --font-body:"Trebuchet MS", Arial, sans-serif;
-  --font-mono:"Courier New", monospace;
+  --font-mono:"IBM Plex Mono", "Lucida Console", monospace;
   --container:960px;
 }
 
