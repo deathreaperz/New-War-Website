@@ -816,12 +816,12 @@ section{ padding:34px 0; }
 .faction-card .fx-tag,.faction-card .fx-more{ color:var(--fc); }
 .card{ min-height:190px; padding:0 16px 15px; display:flex; flex-direction:column; justify-content:flex-end; position:relative; overflow:hidden; }
 .card::before{ content:""; position:absolute; inset:0; background:center/cover no-repeat; opacity:.7; filter:saturate(.9); }
-.card:nth-child(1)::before{ background-image:url("resources/previews/soviet/soviet_conscript.gif"); }
-.card:nth-child(2)::before{ background-image:url("resources/previews/soviet/soviet_flak_trooper.gif"); }
-.card:nth-child(3)::before{ background-image:url("resources/previews/soviet/soviet_crazy_ivan.gif"); }
-.card:nth-child(4)::before{ background-image:url("resources/previews/soviet/soviet_flak_trooper.gif"); background-position:left center; }
-.card:nth-child(5)::before{ background-image:url("resources/previews/soviet/soviet_crazy_ivan.gif"); background-position:right center; }
-.card:nth-child(6)::before{ background-image:url("resources/previews/soviet/soviet_conscript.gif"); background-position:center bottom; }
+.card:nth-child(1)::before{ background-image:url("resources/index/New_Campaigns.png"); }
+.card:nth-child(2)::before{ background-image:url("resources/index/A_Fourth_Faction.png"); }
+.card:nth-child(3)::before{ background-image:url("resources/index/Rebuilt_Rosters.png"); }
+.card:nth-child(4)::before{ background-image:url("resources/index/Fixes_&_Balances.png"); background-position:left center; }
+.card:nth-child(5)::before{ background-image:url("resources/index/Co-Op_&_Skirmish.png"); background-position:right center; }
+.card:nth-child(6)::before{ background-image:url("resources/index/Enhanced_Engine.png"); background-position:center bottom; }
 .card > *{ position:relative; z-index:1; }
 .card::after{ content:""; position:absolute; inset:42% 0 0; background:linear-gradient(transparent,rgba(70,0,0,.95)); }
 .card .num{ display:none; }
