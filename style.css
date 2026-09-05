@@ -747,8 +747,8 @@ button.unit-entry.active .unit-name{ color:var(--paper); }
   --rift-violet-dim:#791010;
   --rift-cyan:#f04444;
   --signal-amber:#f1bf24;
-  --font-display:Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  --font-body:"Trebuchet MS", Arial, sans-serif;
+  --font-display:"Roboto Local", "Roboto", sans-serif;
+  --font-body:"DDT", "Segoe UI", sans-serif;
   --font-mono:"IBM Plex Mono", "Lucida Console", monospace;
   --container:960px;
 }
