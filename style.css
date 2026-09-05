@@ -607,7 +607,7 @@ button.unit-entry.active .unit-name{ color:var(--paper); }
 }
 .detail-list{ list-style:none; margin:0; padding:0; display:grid; gap:8px; }
 .detail-list li{ display:flex; align-items:flex-start; gap:10px; color:var(--steel); font-size:.9rem; }
-.detail-list li::before{ content:"//"; color:var(--fc, var(--rift-violet)); font-family:var(--font-mono); }
+.detail-list li::before{ content:"●"; color:var(--fc, var(--rift-violet)); font-family:var(--font-mono); }
 .detail-icon{
   width:60px; height:48px; flex-shrink:0;
   object-fit:contain; image-rendering:pixelated;
