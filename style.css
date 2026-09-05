@@ -956,6 +956,81 @@ body.home-page .panel-bg > .container > .reveal[style*="display:flex"]{ justify-
   body .st-info-grid{ grid-template-columns:1fr !important; }
 }
 
+/* Final typography and faction navigation polish. */
+body, body button, body input, body textarea, body select{
+  font-family:var(--font-body);
+  font-size:14px;
+  line-height:1.5;
+}
+h1,h2,h3,h4,.btn,.pill,.subnav a,.fx-more{
+  font-family:var(--font-display);
+}
+h1,h2,h3,h4{
+  font-weight:700;
+  letter-spacing:.025em;
+  color:var(--paper) !important;
+}
+body p, body li, body td, body th{
+  color:var(--steel);
+}
+.tag-row:has(.pill[href$="_info.html"]){
+  display:flex;
+  align-items:stretch;
+  gap:6px;
+  padding:5px;
+  border:1px solid color-mix(in srgb, var(--fc) 55%, var(--line));
+  background:rgba(0,0,0,.28);
+  width:max-content;
+  max-width:100%;
+}
+.tag-row:has(.pill[href$="_info.html"]) .pill{
+  border:0;
+  border-radius:0;
+  padding:8px 12px;
+  color:var(--steel);
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.035em;
+  line-height:1.1;
+  transition:background-color .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.tag-row:has(.pill[href$="_info.html"]) .pill:first-child,
+.tag-row:has(.pill[href$="_info.html"]) .pill:hover{
+  background:var(--fc);
+  color:#fff;
+  box-shadow:0 0 0 1px var(--fc), 0 3px 12px color-mix(in srgb, var(--fc) 25%, transparent);
+}
+.tag-row:has(.pill[href$="_info.html"]) .pill:not(:first-child):hover{
+  background:color-mix(in srgb, var(--fc) 65%, #000);
+}
+.subnav{
+  top:0;
+  isolation:isolate;
+}
+.subnav .container{
+  overflow-x:auto;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
+.subnav .container::-webkit-scrollbar{ display:none; }
+.subnav a{
+  flex:0 0 auto;
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.04em;
+  padding:11px 16px;
+}
+@media(max-width:560px){
+  .tag-row:has(.pill[href$="_info.html"]){ width:100%; }
+  .tag-row:has(.pill[href$="_info.html"]) .pill{
+    flex:1 1 auto;
+    text-align:center;
+    padding-left:8px;
+    padding-right:8px;
+  }
+  .subnav a{ padding:11px 13px; }
+}
+
 /* Credits: a compact command-center dossier rather than a plain document. */
 .credits-page .page-hero{ background-image:repeating-linear-gradient(0deg,rgba(150,0,0,.12) 0 1px,transparent 1px 4px),linear-gradient(90deg,#1d0505,#080808 65%); }
 .credits-page > section:not(.page-hero){ background:#080808; }
